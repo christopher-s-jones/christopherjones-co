@@ -1,81 +1,74 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+<Layout title="Christopher Jones">
+	<main class="relative pt-5 md:pt-10 h-screen mx-auto max-w-5xl">
+		<div
+			class="bg-hero-background-light dark:bg-hero-background-dark bg-no-repeat bg-top
+				pt-5 sm:pt-10 md:pt-15 lg:pt-35
+				text-center"
+		>
+			<h1
+				class="text-stone-600 dark:text-stone-50
+					font-serif font-bold tracking-tight
+					text-4xl sm:text-5xl md:text-6xl"
+			>
+				Let's build your
+			</h1>
+			<h1
+				class="text-transparent bg-clip-text pb-5
+					bg-gradient-to-r from-fuchsia-200 via-fuchsia-500 to-fuchsia-900 to-90%
+					font-serif font-bold italic tracking-tight
+					text-4xl sm:text-5xl md:text-6xl"
+			>
+				web app
+			</h1>
+			<h2
+				class="font-sans text-stone-600 dark:text-stone-100 text-base md:text-lg
+				mx-auto mt-6 max-w-2xl text-center px-5 md:px-10"
+			>
+				With frontend, backend, and protocol expertise, I create
+				functional and true-to-design web applications. Let's talk!
+			</h2>
+		</div>
+		<p
+			class="relative font-sans mx-auto px-5 md:px-10 prose prose-p leading-loose
+				text-stone-600 dark:text-stone-400 mt-10"
+		>
+			Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum vivamus
+			arcu etiam iaculis erat risus laoreet. Posuere orci sociosqu potenti
+			nulla tincidunt himenaeos. Phasellus natoque class orci cras;
+			placerat turpis dui. Faucibus volutpat proin ullamcorper laoreet,
+			neque vivamus justo. Sodales volutpat rutrum dignissim fusce,
+			habitasse suscipit rhoncus. Eleifend primis arcu nec molestie cras
+			ex dictum vehicula varius. Maximus dolor est senectus venenatis
+			himenaeos tincidunt. Porta dolor maximus efficitur lacinia
+			pellentesque tempus porttitor magnis cubilia. Fusce porttitor
+			blandit tellus posuere finibus purus donec accumsan vestibulum.
 		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<!-- <ul role="list" class="card">
+				<Card
+					href="https://docs.astro.build/"
+					title="Documentation"
+					body="Learn how Astro works and explore the official API docs."
+				/>
+				<Card
+					href="https://astro.build/integrations/"
+					title="Integrations"
+					body="Supercharge your project with new frameworks and libraries."
+				/>
+				<Card
+					href="https://astro.build/themes/"
+					title="Themes"
+					body="Explore a galaxy of community-built starter themes."
+				/>
+				<Card
+					href="https://astro.build/chat/"
+					title="Community"
+					body="Come say hi to our amazing Discord community. ❤️"
+				/>
+			</ul> -->
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
