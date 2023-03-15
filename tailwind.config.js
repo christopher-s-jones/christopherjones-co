@@ -18,8 +18,8 @@ module.exports = {
         'mono': ['"Source Code Pro Variable"', ...defaultTheme.fontFamily.mono]
       },
       backgroundImage: {
-        'hero-background-light': "url('/img/bokeh-light-50.svg')",
-        'hero-background-dark': "url('/img/bokeh-dark-25.svg')"
+        'hero-background-light': "url('/img/stone-bokeh-light-50.svg')",
+        'hero-background-dark': "url('/img/stone-bokeh-dark-25.svg')"
       },
       colors: {
         'astronaut': {
@@ -88,19 +88,18 @@ module.exports = {
           '950': '#222b49',
         },
         'midnight': {
-          '50': '#e9f9ff',
-          '100': '#cff1ff',
-          '200': '#a9eaff',
-          '300': '#6edfff',
-          '400': '#2ac8ff',
-          '500': '#00a3ff',
-          '600': '#007aff',
-          '700': '#0060ff',
-          '800': '#0050e2',
-          '900': '#004ab0',
-          '950': '#011c41',
+          '50': '#e4eaff',
+          '100': '#cfd8ff',
+          '200': '#a8b6ff',
+          '300': '#7486ff',
+          '400': '#3e42ff',
+          '500': '#2513ff',
+          '600': '#1900ff',
+          '700': '#2000CB',
+          '800': '#16008D',
+          '900': '#0E0059',
+          '950': '#060025',
         },
-
       }
     },
   },
