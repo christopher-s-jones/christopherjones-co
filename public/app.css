@@ -1621,11 +1621,6 @@ video {
   transition-duration: 150ms;
 }
 
-.hover\:bg-stone-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 250 249 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-gradient-to-br:hover {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1791,11 +1786,6 @@ video {
   .dark\:text-stone-50 {
     --tw-text-opacity: 1;
     color: rgb(250 250 249 / var(--tw-text-opacity));
-  }
-
-  .dark\:hover\:bg-stone-700:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(68 64 60 / var(--tw-bg-opacity));
   }
 
   .dark\:hover\:text-amber-400:hover {
