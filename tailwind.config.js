@@ -18,8 +18,8 @@ module.exports = {
         'mono': ['"Source Code Pro Variable"', ...defaultTheme.fontFamily.mono]
       },
       backgroundImage: {
-        'hero-background-light': "url('/img/bokeh-light-50.svg')",
-        'hero-background-dark': "url('/img/bokeh-dark-25.svg')"
+        'hero-background-light': "url('/img/stone-bokeh-light-50.svg')",
+        'hero-background-dark': "url('/img/stone-bokeh-dark-25.svg')"
       },
       colors: {
         'astronaut': {

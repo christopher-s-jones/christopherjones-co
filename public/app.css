@@ -1418,7 +1418,7 @@ video {
 }
 
 .bg-hero-background-light {
-  background-image: url('/img/bokeh-light-50.svg');
+  background-image: url('/img/stone-bokeh-light-50.svg');
 }
 
 .from-amber-400 {
@@ -1753,7 +1753,7 @@ video {
   }
 
   .dark\:bg-hero-background-dark {
-    background-image: url('/img/bokeh-dark-25.svg');
+    background-image: url('/img/stone-bokeh-dark-25.svg');
   }
 
   .dark\:from-stone-800 {
