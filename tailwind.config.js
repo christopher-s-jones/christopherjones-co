@@ -4,24 +4,22 @@ module.exports = {
   content: ['./src/**/*.{html,js,ts,astro}'],
   theme: {
     extend: {
-      // 'Inter Tight Variable'
-      // 'Inter Variable'
-      // 'Montserrat Variable'
-      // 'Noto Serif Display Variable'
-      // 'Open Sans Variable'
-      // 'Playfair Display Variable'
-      // 'Raleway Variable'
-      // 'Source Code Pro Variable'
       fontFamily: {
-        'sans': ['"Open Sans Variable"', ...defaultTheme.fontFamily.sans],
-        'serif': ['"Raleway Variable"', ...defaultTheme.fontFamily.serif],
+        'sans': ['"Roboto Flex Variable"', ...defaultTheme.fontFamily.sans],
+        'serif': ['"Roboto Flex Variable"', ...defaultTheme.fontFamily.serif],
         'mono': ['"Source Code Pro Variable"', ...defaultTheme.fontFamily.mono]
       },
       backgroundImage: {
-        'hero-background-light': "url('/img/stone-bokeh-light-50.svg')",
-        'hero-background-dark': "url('/img/stone-bokeh-dark-25.svg')"
+        'hero-background-light': 'url("/img/stone-bokeh-light-50.svg")',
+        'hero-background-dark': 'url("/img/stone-bokeh-dark-25.svg")',
+        'starfield-background': 'url("/img/starfield.svg")',
+        'starfield-background-sm': 'url("/img/starfield-sm.svg")',
+        'starfield-background-md': 'url("/img/starfield-md.svg")'
       },
       colors: {
+        'blue': {
+          '975': '#0D142E'
+        },
         'astronaut': {
           '50': '#f3f5fb',
           '100': '#e3e8f6',
