@@ -1,129 +1,24 @@
-
-@font-face {
-    font-family: 'Inter Variable';
-    font-weight: 100 900;
-    font-style: normal;
-    font-stretch: normal;
-    src: url('/fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Inter Variable';
-    font-weight: 100 900;
-    font-style: italic;
-    font-stretch: normal;
-    src: url('/fonts/Inter-Italic-VariableFont_opsz,wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Inter Tight Variable';
-    font-weight: 100 900;
-    font-style: normal;
-    font-stretch: normal;
-    src: url('/fonts/InterTight-VariableFont_wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Inter Tight Variable';
-    font-weight: 100 900;
-    font-style: italic;
-    font-stretch: normal;
-    src: url('/fonts/InterTight-Italic-VariableFont_wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Montserrat Variable';
-    font-weight: 100 900;
-    font-style: normal;
-    font-stretch: normal;
-    src: url('/fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Montserrat Variable';
-    font-weight: 100 900;
-    font-style: italic;
-    font-stretch: normal;
-    src: url('/fonts/Montserrat-Italic-VariableFont_wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Noto Serif Display Variable';
-    font-weight: 100 900;
-    font-style: normal;
-    font-stretch: normal;
-    src: url('/fonts/NotoSerifDisplay-VariableFont_wdth,wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Noto Serif Display Variable';
-    font-weight: 100 900;
-    font-style: italic;
-    font-stretch: normal;
-    src: url('/fonts/NotoSerifDisplay-Italic-VariableFont_wdth,wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Open Sans Variable';
-    font-weight: 100 900;
-    font-style: normal;
-    font-stretch: normal;
-    src: url('/fonts/OpenSans-VariableFont_wdth,wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Open Sans Variable';
-    font-weight: 100 900;
-    font-style: italic;
-    font-stretch: normal;
-    src: url('/fonts/OpenSans-Italic-VariableFont_wdth,wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Playfair Display Variable';
-    font-weight: 100 900;
-    font-style: normal;
-    font-stretch: normal;
-    src: url('/fonts/PlayfairDisplay-VariableFont_wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Playfair Display Variable';
-    font-weight: 100 900;
-    font-style: italic;
-    font-stretch: normal;
-    src: url('/fonts/PlayfairDisplay-Italic-VariableFont_wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Raleway Variable';
-    font-weight: 100 900;
-    font-style: normal;
-    font-stretch: normal;
-    src: url('/fonts/Raleway-VariableFont_wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Raleway Variable';
-    font-weight: 100 900;
-    font-style: italic;
-    font-stretch: normal;
-    src: url('/fonts/Raleway-Italic-VariableFont_wght.woff2') format('woff2');
-}
-
-
 @font-face {
     font-family: 'Source Code Pro Variable';
-    font-weight: 200 900;
-    font-style: normal;
-    font-stretch: normal;
-    src: url('/fonts/SourceCodePro-VariableFont_wght.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Source Code Pro Variable';
+    font-display: auto;
     font-weight: 200 900;
     font-style: italic;
     font-stretch: normal;
     src: url('/fonts/SourceCodePro-Italic-VariableFont_wght.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto Flex Variable';
+    font-display: auto;
+    font-weight: 100 1000;
+    font-style: normal;
+    src: url('/fonts/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto Flex Variable';
+    font-display: auto;
+    font-weight: 100 1000;
+    font-style: italic;
+    src: url('/fonts/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.woff2') format('woff2');
 }
