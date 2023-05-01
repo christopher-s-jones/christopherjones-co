@@ -4,50 +4,138 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Christopher Jones">
-	<main class="relative pt-5 md:pt-10 h-screen mx-auto max-w-5xl">
-		<div
-			class="bg-hero-background-light dark:bg-hero-background-dark bg-no-repeat bg-top
-				pt-5 sm:pt-10 md:pt-15 lg:pt-35
-				text-center"
+	<main class="relative w-screen snap-y snap-mandatory">
+		<!-- <section class="snap-start 
+		 	relative flex
+			mb-20 sm:mb-30 md:mb-40 h-screen"
 		>
+		</section> -->
+		<section class="snap-start 
+			dark:bg-starfield-background-sm dark:lg:bg-starfield-background-md
+			dark:bg-no-repeat dark:bg-center dark:bg-cover 
+			py-40 xl:py-60 text-center">
 			<h1
-				class="text-stone-600 dark:text-stone-50
-					font-serif font-bold tracking-tight
-					text-4xl sm:text-5xl md:text-6xl"
+				class="text-slate-700 dark:text-slate-50
+					font-sans font-light sm:font-normal tracking-tight
+					dark:font-extralight dark:sm:font-light
+					text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
 			>
 				Let's build your
 			</h1>
 			<h1
-				class="text-transparent bg-clip-text pb-5
-					bg-gradient-to-r from-fuchsia-200 via-fuchsia-500 to-fuchsia-900 to-90%
-					font-serif font-bold italic tracking-tight
-					text-4xl sm:text-5xl md:text-6xl"
+				class="relative justify-center text-center mx-0 my-auto pb-10 whitespace-nowrap
+					font-sans font-light sm:font-normal italic tracking-tight
+					text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+					writer sm:writer-sm md:writer-md lg:writer-lg"
 			>
-				web app
+				<span id="typewriter-1" class="absolute top-0 left-0 right-0 w-0 text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 from-20% to-fuchsia-900 to-90% max-w-min overflow-hidden mx-auto my-0 py-1 md:py-2 opacity-100">web application.</span>
+				<span id="typewriter-2" class="absolute top-0 left-0 right-0 w-0 text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 from-20% to-fuchsia-900 to-90% max-w-min overflow-hidden mx-auto my-0 py-1 md:py-2 opacity-100">backend service.</span>
+				<span id="typewriter-3" class="absolute top-0 left-0 right-0 w-0 text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 from-20% to-fuchsia-900 to-90% max-w-min overflow-hidden mx-auto my-0 py-1 md:py-2 opacity-100">protocol api.</span>
+				<span id="typewriter-4" class="absolute top-0 left-0 right-0 w-0 text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 from-20% to-fuchsia-900 to-90% max-w-min overflow-hidden mx-auto my-0 py-1 md:py-2 opacity-100">successful project.</span>
 			</h1>
 			<h2
-				class="font-sans text-stone-600 dark:text-stone-100 text-base md:text-lg
-				mx-auto mt-6 max-w-2xl text-center px-5 md:px-10"
+				class="font-sans text-slate-600 dark:text-slate-100
+				text-lg lg:text-xl text-center
+				mx-auto mt-20 lg:mt-32 max-w-2xl px-5 md:px-10"
 			>
 				With frontend, backend, and protocol expertise, I create
-				functional and true-to-design web applications. Let's talk!
+				engaging, responsive, and seamless end-to-end applications. Let's talk!
 			</h2>
-		</div>
-		<p
-			class="relative font-sans mx-auto px-5 md:px-10 prose prose-p leading-loose
-				text-stone-600 dark:text-stone-400 mt-10"
-		>
-			Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum vivamus
-			arcu etiam iaculis erat risus laoreet. Posuere orci sociosqu potenti
-			nulla tincidunt himenaeos. Phasellus natoque class orci cras;
-			placerat turpis dui. Faucibus volutpat proin ullamcorper laoreet,
-			neque vivamus justo. Sodales volutpat rutrum dignissim fusce,
-			habitasse suscipit rhoncus. Eleifend primis arcu nec molestie cras
-			ex dictum vehicula varius. Maximus dolor est senectus venenatis
-			himenaeos tincidunt. Porta dolor maximus efficitur lacinia
-			pellentesque tempus porttitor magnis cubilia. Fusce porttitor
-			blandit tellus posuere finibus purus donec accumsan vestibulum.
-		</p>
+		</section>
+		<section class="snap-start dark:bg-slate-950 pt-20">
+			<p
+				class="sm:rounded-lg dark:bg-slate-900 relative font-sans 
+				mx-auto px-5 pt-20 pb-10 md:px-10 prose prose-p leading-loose
+				text-slate-500 dark:text-slate-400 mt-10"
+			>
+				Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum vivamus
+				arcu etiam iaculis erat risus laoreet. Posuere orci sociosqu potenti
+				nulla tincidunt himenaeos. Phasellus natoque class orci cras;
+				placerat turpis dui. Faucibus volutpat proin ullamcorper laoreet,
+				neque vivamus justo. Sodales volutpat rutrum dignissim fusce,
+				habitasse suscipit rhoncus. Eleifend primis arcu nec molestie cras
+				ex dictum vehicula varius. Maximus dolor est senectus venenatis
+				himenaeos tincidunt. Porta dolor maximus efficitur lacinia
+				pellentesque tempus porttitor magnis cubilia. Fusce porttitor
+				blandit tellus posuere finibus purus donec accumsan vestibulum.
+			</p>
+			<p
+				class="relative font-sans mx-auto px-5 md:px-10 prose prose-p leading-loose
+				text-slate-600 dark:text-slate-400 mt-10"
+			>
+				Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum vivamus
+				arcu etiam iaculis erat risus laoreet. Posuere orci sociosqu potenti
+				nulla tincidunt himenaeos. Phasellus natoque class orci cras;
+				placerat turpis dui. Faucibus volutpat proin ullamcorper laoreet,
+				neque vivamus justo. Sodales volutpat rutrum dignissim fusce,
+				habitasse suscipit rhoncus. Eleifend primis arcu nec molestie cras
+				ex dictum vehicula varius. Maximus dolor est senectus venenatis
+				himenaeos tincidunt. Porta dolor maximus efficitur lacinia
+				pellentesque tempus porttitor magnis cubilia. Fusce porttitor
+				blandit tellus posuere finibus purus donec accumsan vestibulum.
+			</p>
+			<p
+				class="relative font-sans mx-auto px-5 md:px-10 prose prose-p leading-loose
+			text-slate-600 dark:text-slate-400 mt-10"
+			>
+				Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum vivamus
+				arcu etiam iaculis erat risus laoreet. Posuere orci sociosqu potenti
+				nulla tincidunt himenaeos. Phasellus natoque class orci cras;
+				placerat turpis dui. Faucibus volutpat proin ullamcorper laoreet,
+				neque vivamus justo. Sodales volutpat rutrum dignissim fusce,
+				habitasse suscipit rhoncus. Eleifend primis arcu nec molestie cras
+				ex dictum vehicula varius. Maximus dolor est senectus venenatis
+				himenaeos tincidunt. Porta dolor maximus efficitur lacinia
+				pellentesque tempus porttitor magnis cubilia. Fusce porttitor
+				blandit tellus posuere finibus purus donec accumsan vestibulum.
+			</p>
+			<p
+				class="relative font-sans mx-auto px-5 md:px-10 prose prose-p leading-loose
+	text	-slate-600 dark:text-slate-400 mt-10"
+			>
+				Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum vivamus
+				arcu etiam iaculis erat risus laoreet. Posuere orci sociosqu potenti
+				nulla tincidunt himenaeos. Phasellus natoque class orci cras;
+				placerat turpis dui. Faucibus volutpat proin ullamcorper laoreet,
+				neque vivamus justo. Sodales volutpat rutrum dignissim fusce,
+				habitasse suscipit rhoncus. Eleifend primis arcu nec molestie cras
+				ex dictum vehicula varius. Maximus dolor est senectus venenatis
+				himenaeos tincidunt. Porta dolor maximus efficitur lacinia
+				pellentesque tempus porttitor magnis cubilia. Fusce porttitor
+				blandit tellus posuere finibus purus donec accumsan vestibulum.
+			</p>
+			<p
+				class="relative font-sans mx-auto px-5 md:px-10 prose prose-p leading-loose
+	text	-slate-600 dark:text-slate-400 mt-10"
+			>
+				Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum vivamus
+				arcu etiam iaculis erat risus laoreet. Posuere orci sociosqu potenti
+				nulla tincidunt himenaeos. Phasellus natoque class orci cras;
+				placerat turpis dui. Faucibus volutpat proin ullamcorper laoreet,
+				neque vivamus justo. Sodales volutpat rutrum dignissim fusce,
+				habitasse suscipit rhoncus. Eleifend primis arcu nec molestie cras
+				ex dictum vehicula varius. Maximus dolor est senectus venenatis
+				himenaeos tincidunt. Porta dolor maximus efficitur lacinia
+				pellentesque tempus porttitor magnis cubilia. Fusce porttitor
+				blandit tellus posuere finibus purus donec accumsan vestibulum.
+			</p>
+			<p
+				class="relative font-sans mx-auto px-5 md:px-10 prose prose-p leading-loose
+	text	-slate-600 dark:text-slate-400 mt-10"
+			>
+				Lorem ipsum odor amet, consectetuer adipiscing elit. Rutrum vivamus
+				arcu etiam iaculis erat risus laoreet. Posuere orci sociosqu potenti
+				nulla tincidunt himenaeos. Phasellus natoque class orci cras;
+				placerat turpis dui. Faucibus volutpat proin ullamcorper laoreet,
+				neque vivamus justo. Sodales volutpat rutrum dignissim fusce,
+				habitasse suscipit rhoncus. Eleifend primis arcu nec molestie cras
+				ex dictum vehicula varius. Maximus dolor est senectus venenatis
+				himenaeos tincidunt. Porta dolor maximus efficitur lacinia
+				pellentesque tempus porttitor magnis cubilia. Fusce porttitor
+				blandit tellus posuere finibus purus donec accumsan vestibulum.
+			</p>
+		</section>
+
 		<!-- <ul role="list" class="card">
 				<Card
 					href="https://docs.astro.build/"
