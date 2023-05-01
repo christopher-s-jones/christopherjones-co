@@ -4,12 +4,12 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-import Header from "../components/Header.astro"
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="bg-stone-50 dark:bg-stone-950">
+<html lang="en" class="bg-slate-50 dark:bg-blue-975">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,15 +19,18 @@ import Footer from "../components/Footer.astro";
 	</head>
 	<body class="antialiased 
 		bg-no-repeat dark:bg-no-repeat
-		bg-gradient-to-b 
-			from-white from-40% 
-			to-stone-50 to-90% 
+		bg-gradient-to-t 
+			from-amber-50 from-10% 
+			via-slate-50 via-50%
+			to-white to-90% 
 		dark:bg-gradient-to-b 
-			dark:from-stone-800 dark:from-40% 
-			dark:to-stone-950 dark:to-90%
-		text-stone-900 dark:text-stone-50 h-dvh dark:h-dvh">
-		<Header />
-		<slot />
-		<Footer />
+			dark:from-blue-975 dark:from-30% 
+			dark:to-blue-950 dark:to-60%
+		text-slate-900 dark:text-slate-50">
+		<div class="grid grid-col-1 gap-0">
+			<Header />
+			<slot />
+			<Footer />
+		</div>
 	</body>
 </html>
