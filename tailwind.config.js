@@ -4,14 +4,16 @@ module.exports = {
   content: ['./src/**/*.{html,js,ts,astro}'],
   theme: {
     extend: {
+      screens: {
+        '3xl': '2561px'
+      },
       fontFamily: {
         'sans': ['"Roboto Flex Variable"', ...defaultTheme.fontFamily.sans],
         'serif': ['"Roboto Flex Variable"', ...defaultTheme.fontFamily.serif],
         'mono': ['"Source Code Pro Variable"', ...defaultTheme.fontFamily.mono]
       },
       backgroundImage: {
-        'hero-background-light': 'url("/img/stone-bokeh-light-50.svg")',
-        'hero-background-dark': 'url("/img/stone-bokeh-dark-25.svg")',
+        'sunflare-background-light': 'url("/img/sunflare.svg")',
         'starfield-background': 'url("/img/starfield.svg")',
         'starfield-background-sm': 'url("/img/starfield-sm.svg")',
         'starfield-background-md': 'url("/img/starfield-md.svg")'
