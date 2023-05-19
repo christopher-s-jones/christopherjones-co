@@ -30,7 +30,7 @@
             <use xlink:href="#spike-sm" transform="rotate(45)"></use>
             <use xlink:href="#spike-sm" transform="rotate(-45)"></use>
         </g>
-        <g id="star-lg" transform="scale(1)" fill-opacity=".75">
+        <g id="star-lg" transform="scale(.6)" fill-opacity=".4">
             <use xlink:href="#cross"></use>
             <use xlink:href="#qcross"></use>
             <use xlink:href="#core" filter="url(#f)"></use>
