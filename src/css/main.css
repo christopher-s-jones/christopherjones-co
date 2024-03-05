@@ -67,9 +67,10 @@
 
 @layer components {
     .background-grid-light {
+        z-index: 100;
         background-size: 20px 20px;
-        background-image: linear-gradient(to right, var(--slate-100) 1px, transparent 1px),
-          linear-gradient(to bottom, var(--slate-100) 1px, transparent 1px);
+        background-image: linear-gradient(to right, var(--blue-200) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--blue-200) 1px, transparent 1px);
         background-position: top center;
         image-rendering: pixelated;
     }
@@ -87,24 +88,24 @@
     h1.writer span#typewriter-1 {
         animation:
             1s steps(32, end) 1s 1 normal forwards type,
-            1s steps(32, end) 3s 1 normal forwards delete;
+            .5s steps(32, end) 3s 1 normal forwards delete;
     }
 
     h1.writer span#typewriter-2 {
         animation:
             1s steps(32, end) 5s 1 normal forwards type,
-            1s steps(32, end) 6s 1 normal forwards delete;
+            .5s steps(32, end) 7s 1 normal forwards delete;
     }
 
     h1.writer span#typewriter-3 {
         animation:
-            1s steps(32, end) 8s 1 normal forwards type,
-            1s steps(32, end) 10s 1 normal forwards delete;
+            1s steps(32, end) 9s 1 normal forwards type,
+            .5s steps(32, end) 11s 1 normal forwards delete;
     }
 
     h1.writer span#typewriter-4 {
         animation:
-            1s steps(32, end) 12s 1 normal forwards type;
+            1s steps(32, end) 13s 1 normal forwards type;
     }
 
     @keyframes type {
