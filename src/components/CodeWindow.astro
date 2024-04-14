@@ -1,0 +1,82 @@
+---
+import { Code } from "astro:components";
+
+// The code to be displayed in the CodeWindow
+const code = 
+`package main
+
+import (
+	"context"
+	"encoding/json"
+	"log"
+	"os/exec"
+
+	"github.com/shurcooL/githubv4"
+	"golang.org/x/oauth2"
+)
+
+func main() {
+	// Load and set Github OAuth tokens per user
+	jsonBytes, err := exec.Command("gpg", "-d", "gh-tokens.json.gpg").Output()
+	jsonStr := string(jsonBytes)
+
+	credentials := &Credentials{}
+	err = json.Unmarshal([]byte(jsonStr), credentials)
+	if err != nil {
+		log.Fatalf("Couldn't parse JSON credentials file: %s", err)
+	}
+	// List repositories for each user and get statistics
+	var reporter Reporter
+	for _, credential := range *credentials {
+		src := oauth2.StaticTokenSource(&oauth2.Token{AccessToken: credential.Token})
+		httpClient := oauth2.NewClient(context.Background(), src)
+		apiClient := githubv4.NewClient(httpClient)
+		firstYear := defaultFirstContributionYear
+		lastYear := 2024
+		reporter, err = NewReporter(apiClient, credential.Username, firstYear, lastYear)
+		if err != nil {
+			log.Fatalf("Couldn't get a reporter correctly: %s", err)
+		}
+		err = reporter.collect()
+		if err != nil {
+			log.Print(err)
+		}
+	}
+	aggregatedResults, err := reporter.report()
+	log.Print(aggregatedResults)
+}
+`
+---
+
+<!-- A mock window used to display code -->
+<div
+    class="relative mx-auto 
+    xl:row-start-1 xl:col-start-1 col-end-7
+    bg-slate-900 text-slate-500
+    rounded-xl border border-slate-400 dark:border-slate-700 border-collapse overflow-hidden
+    w-7/8 lg:w-full h-[500px] lg:h-[600px] 2xl:h-[800px] "
+>
+    <!-- The window header -->
+    <header
+        class="relative top-0 right-0 left-0 py-[1px] flex items-center px-3 space-x-1.5
+                rounded-t-xl border-b border-slate-700
+                bg-slate-100 dark:bg-slate-800 text-center"
+    >
+        <div class="w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+        <div class="w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+        <div class="w-3 h-3 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+        <div class="w-full h-6 items-center"></div>
+    </header>
+    <div class="relative flex flex-col w-full">
+        <!-- The window body -->
+        <div class="relative w-full flex-auto">
+            <pre class="flex min-h-full text-sm leading-6 font-mono overflow-hidden">
+                <!-- The line number gutter -->
+                <div aria-hidden="true" class="flex-none hidden sm:block py-4 pl-6 pr-6
+                    text-right select-none whitespace-normal border-r border-slate-700" style="width: 40px">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42</div>
+                <!-- The code panel -->
+                <code class="flex-auto relative block w-full text-left"><Code class="p-4" code={code} lang="go" theme="night-owl" /></code>
+            </pre>
+        </div>
+    </div>
+</div>
