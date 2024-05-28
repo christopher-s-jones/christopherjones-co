@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About | Christopher Jones">
+    <section class="flex flex-auto">
+        <figure class="px-10 Md:px-20 pt-20 md:pt-40 xl:pt-60 2xl:pt-80">
+            <img
+            srcset="/img/chris-chautauqua-192w.png 192w, /img/chris-chautauqua-256w.png 256w, /img/chris-chautauqua-512w.png 512w"
+            sizes="(max-width: 320px) 192px, (max-width: 640px) 256px, (max-width: 1024px) 512px"
+            src="/img/chris-chautauqua-512w.png"
+            class="mx-auto size-24 md:size-64 xl:size-72 2xl:size-96 rounded-full"
+            alt="Christopher Jones photo in Boulder, Colorado"
+        />
+        </figure>
+        <h2 class="text-right">Hi, I'm Chris</h2>
+    </section>
+
+
+</Layout>
