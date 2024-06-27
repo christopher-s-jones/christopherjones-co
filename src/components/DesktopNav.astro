@@ -24,8 +24,7 @@
         >
     </div>
     <!-- Toggle light or dark mode -->
-    <button id="theme-toggle" 
-        class="items-center px-3 py-2 ml-5 z-50">
+    <button id="theme-toggle" class="items-center px-3 py-2 ml-5 z-50">
         <span id="theme-toggle-light" class="dark:hidden">
             <!-- Sunshine Icon -->
             <svg
@@ -42,7 +41,7 @@
             </svg>
         </span>
         <span id="theme-toggle-dark" class="hidden dark:inline">
-            <!-- Moon Icon--> 
+            <!-- Moon Icon-->
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -84,48 +83,97 @@
     let lightIcon = document.getElementById("theme-toggle-light");
     let themeButton = document.getElementById("theme-toggle");
 
-    const themeHandler = function(event) {
+    /**
+     * enableDarkMode changes the theme to dark mode using the
+     * TailwindCSS convention of setting the class="dark" attribute
+     * on the root element and in localStorage
+     * @param via "manually" or "system"
+     */
+    const enableDarkMode = function (via: string) {
+        // Toggle to dark
+        document.documentElement.classList.add("dark");
+        darkIcon.classList.remove("hidden");
+        lightIcon.classList.add("hidden");
+        switch (via) {
+            case "manually":
+                localStorage.setItem("theme", "dark");
+                break;
+            case "system":
+                localStorage.removeItem("theme");
+                break;
+            default:
+                localStorage.setItem("theme", "dark");
+        }
+    };
+
+    /**
+     * disableDarkMode changes the theme to light mode using the
+     * TailwindCSS convention of removing the class="dark" attribute
+     * on the root element and in localStorage
+     * @param via "manually" or "system"
+     */
+    const disableDarkMode = function (via: string) {
+        // Toggle to light
+        document.documentElement.classList.remove("dark");
+        lightIcon.classList.remove("hidden");
+        darkIcon.classList.add("hidden");
+        switch (via) {
+            case "manually":
+                localStorage.setItem("theme", "light");
+                break;
+            case "system":
+                localStorage.removeItem("theme");
+                break;
+            default:
+                localStorage.setItem("theme", "light");
+        }
+    };
+
+    /**
+     * themeHandler changes the theme manually when the theme
+     * button is clicked
+     * @param event the click event
+     */
+    const themeHandler = function (event: Event) {
         console.log("Theme button clicked.");
         // Toggle the theme
         darkIcon.classList.toggle("hidden");
         lightIcon.classList.toggle("hidden");
 
         // When local storage has a theme key
-        if ("theme" in localStorage) {
-            // Toggle to dark
-            if (localStorage.theme === "light") {
-                document.documentElement.classList.add("dark");
-                localStorage.setItem("theme", "dark");
-                // Toggle to light
-            } else {
-                document.documentElement.classList.remove("dark");
-                localStorage.setItem("theme", "light");
-            }
-            // Not in local storage, set it now
+        if (darkIcon.classList.contains("hidden")) {
+            disableDarkMode("manually");
         } else {
-            // Toggle to light
-            if ("dark" in document.documentElement.classList) {
-                document.documentElement.classList.remove("dark");
-                localStorage.setItem("theme", "light");
-            // Toggle to dark
-            } else {
-                document.documentElement.classList.add("dark");
-                localStorage.setItem("theme", "dark");
-            }
+            enableDarkMode("manually");
         }
     };
-    
-    if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-theme: dark)").matches)
-    ) {
-        // Toggle to dark
-         darkIcon.classList.remove("hidden");
+
+    // Respond to system theme preferences
+    const darkModePref = window.matchMedia("(prefers-color-scheme: dark)");
+    darkModePref.addEventListener("change", function (e: MediaQueryListEvent) {
+        console.log("System theme changed to dark.");
+        if (e.matches) {
+            enableDarkMode("system");
+        }
+    });
+
+    const lightModePref = window.matchMedia("(prefers-color-scheme: light)");
+    lightModePref.addEventListener("change", function (e: MediaQueryListEvent) {
+        console.log("System theme changed to light.");
+        if (e.matches) {
+            disableDarkMode("system");
+        }
+    });
+
+    // Override the system prefs if dark mode is locally stored
+    if (localStorage.theme === "dark") {
+        enableDarkMode("manually");
+    } else if (!("theme" in localStorage) && darkModePref.matches) {
+        disableDarkMode("system");
     } else {
-        // Toggle to light
-        lightIcon.classList.remove("hidden");
+        disableDarkMode("system");
     }
+
     // Respond to click events on the theme button
     themeButton.addEventListener("click", themeHandler);
 </script>
