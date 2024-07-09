@@ -1,33 +1,30 @@
 ---
-import Logo from "../components/Logo.astro";
-import MobileNav from "../components/MobileNav.astro";
-import DesktopNav from "../components/DesktopNav.astro";
+import Logo from "./Logo.astro";
+import MobileNav from "../components/react/MobileNav";
+import DesktopNav from "./DesktopNav.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header
     class="fixed
         top-0 left-0 right-0 z-50
-        px-6 py-4 3xl:py-6
-        flex flex-row justify-start items-center
         backdrop-blur-md
         bg-white
         bg-opacity-95
         dark:bg-opacity-50
         dark:bg-slate-950"
 >
-    <!-- Logo on the left  -->
-    <Logo />
-    <div class="fixed items-center right-0 max-w-7xl 3xl:max-w-[2560px]">
+    <div
+        class="flex items-center justify-start max-w-7xl 3xl:max-w-[2560px] mx-auto px-6 py-4 3xl:py-6"
+    >
+        <!-- Logo on the left  -->
+        <Logo />
         <!-- Responsive padding -->
-        <div class="flex flex-row-reverse mx-auto">
+        <div class="fixed right-0 mx-5 flex flex-row-reverse">
             <!-- Navigation on the right -->
             <!-- Desktop menu -->
             <DesktopNav />
-            <!-- Light/Dark Theme Toggle -->
             <ThemeToggle />
-            <!-- Mobile menu -->
-            <MobileNav />
         </div>
     </div>
 </header>
