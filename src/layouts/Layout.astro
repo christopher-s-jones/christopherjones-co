@@ -5,7 +5,7 @@ export interface Props {
 
 const { title } = Astro.props;
 import { ClientRouter } from "astro:transitions";
-import Header from "../components/Header.astro";
+import Header from "../components/react/Header";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -27,7 +27,7 @@ import Footer from "../components/Footer.astro";
 			dark:to-blue-950 dark:to-60%
 		text-slate-900 dark:text-slate-50">
 		<div class="grid grid-cols-1 gap-0 items-center">
-			<Header />
+			<Header client:only />
 			<slot />
 			<Footer />
 		</div>
