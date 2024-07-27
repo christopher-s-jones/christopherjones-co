@@ -10,7 +10,7 @@ export default function ThemeToggle() {
 
     // themeHandler handles click events on the ThemeToggle button
     const themeHandler = (event: React.MouseEvent) => {
-        console.log("Theme button clicked.");
+        console.debug("Theme button clicked.");
         $themeState.set({
             isDark: !themeState.isDark, // Toggle the value
             via: "manual",

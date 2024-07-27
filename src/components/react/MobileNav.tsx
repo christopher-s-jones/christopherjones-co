@@ -1,14 +1,16 @@
 import { useStore } from "@nanostores/react"
 import { isMenuOpen } from "../../stores/menuState"
-import { isMobile } from "../../stores/mobileState";
+import { $isMobile } from "../../stores/mobileState";
 
 
 export default function MobileNav() {
-    const $isMobile = useStore(isMobile);
+    const isMobile = useStore($isMobile);
     const $isMenuOpen = useStore(isMenuOpen);
     
     return (
-            <nav className={isMobile ? "md:hidden flex items-center" : "hidden md:hidden flex items-center"}>
+            <nav className=
+                {isMobile ? "md:hidden flex items-center" : "hidden md:hidden"}
+                >
             <button type="button"
                 className="flex justify-center"
             >

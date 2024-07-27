@@ -3,13 +3,13 @@ import MobileNav from "./MobileNav";
 import DesktopNav from "./DesktopNav";
 import ThemeToggle from "./ThemeToggle";
 import { useStore } from "@nanostores/react";
-import { isMobile } from "../../stores/mobileState";
+import { $isMobile } from "../../stores/mobileState";
 
 // Header is the common page header with an embedded nav,
 // either mobile or desktop
 export default function Header() {
 
-    const $isMobile = useStore(isMobile);
+    const isMobile = useStore($isMobile);
 
     return (
         <header
@@ -27,10 +27,15 @@ export default function Header() {
             >
                 <Logo />
                 <div className="fixed right-0 mx-5 flex flex-row-reverse">
-                    {isMobile && (<><ThemeToggle /><MobileNav /></>)}
-                    {!isMobile && (<><DesktopNav /><ThemeToggle /></>)}
+                    {/**ThemeToggle is rendering in the opposite order,
+                     * so reverse the order here for both mobile and desktop.
+                     * Odd behavior =)
+                     */}
+                    {isMobile && (<><MobileNav /><ThemeToggle /></>)}
+                    {!isMobile && (<><ThemeToggle /><DesktopNav /></>)}
                 </div>
             </div>
         </header>
+
     );
 }
