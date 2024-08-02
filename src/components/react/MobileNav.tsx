@@ -31,7 +31,7 @@ export default function MobileNav() {
                 </button>
                 {isMenuOpen &&
                     <div className={isMenuOpen ?
-                        "fixed top-0 right-4 pt-14 pb-6 w-full max-w-xs rounded-lg shadow-lg bg-stone-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-base font-semibold" : "hidden"
+                        "fixed top-[2px] right-4 pt-14 pb-6 w-full max-w-xs rounded-lg shadow-lg bg-stone-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-base font-semibold" : "hidden"
                     }>
                         <button onClick={() => $isMenuOpen.set(false)} className="absolute top-5 right-5 w-8 h-8
                             flex items-center justify-center 
