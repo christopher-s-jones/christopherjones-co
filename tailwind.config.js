@@ -22,6 +22,7 @@ export default {
       },
       colors: {
         'blue': {
+          '960': '#111B3D',
           '975': '#0D142E'
         },
         'midnight': {
