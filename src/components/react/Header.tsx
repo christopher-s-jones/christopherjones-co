@@ -22,11 +22,12 @@ export default function Header() {
                 dark:bg-slate-950"
         >
             <div
-                className="flex items-center justify-start 
-                    max-w-7xl 3xl:max-w-[2560px] mx-auto px-6 py-4 3xl:py-6"
+                className="flex items-center justify-between 
+                    max-w-7xl 3xl:max-w-[2560px] mx-auto px-6 py-0 sm:py-1 md:py-6"
             >
                 <Logo />
-                <div className="fixed right-0 mx-5 flex flex-row-reverse">
+                <div className="content" />
+                <div className="flex flex-end flex-row-reverse">
                     {/**ThemeToggle is rendering in the opposite order,
                      * so reverse the order here for both mobile and desktop.
                      * Odd behavior =)
