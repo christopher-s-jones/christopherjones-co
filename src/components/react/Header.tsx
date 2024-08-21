@@ -22,7 +22,7 @@ export default function Header() {
                 dark:bg-slate-950"
         >
             <div
-                className="flex items-center justify-between 
+                className="flex items-center justify-between min-h-20
                     max-w-7xl 3xl:max-w-[2560px] mx-auto px-6 py-0 sm:py-1 md:py-6"
             >
                 <Logo />
