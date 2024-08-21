@@ -80,6 +80,7 @@
         background-repeat: no-repeat;
         background-position: top center;
     }
+}
 
 
 @layer utilities {
@@ -127,5 +128,4 @@
         from, to { border-color: transparent; }
         50% { border-color: var(--amber-400); }
     } */
-}
 }
