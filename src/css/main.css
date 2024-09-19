@@ -50,6 +50,7 @@
         --blue-800: #1e40af;
         --blue-900: #1e3a8a;
         --blue-950: #172554;
+        --blue-960: #111B3D;
         --blue-975: #0D142E;
         --indigo-50:  #eef2ff;
         --indigo-100: #e0e7ff;
@@ -67,18 +68,20 @@
 
 @layer components {
     .background-grid-light {
-        z-index: 100;
-        background-size: 20px 20px;
-        background-image: linear-gradient(to right, var(--blue-200) 1px, transparent 1px),
-          linear-gradient(to bottom, var(--blue-200) 1px, transparent 1px);
+        z-index: 0;
+        background-size: 50px 50px;
+        background-image: linear-gradient(to right, var(--slate-100) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--slate-100) 1px, transparent 1px);
         background-position: top center;
         image-rendering: pixelated;
     }
     .background-grid-dark {
-        background-image: url('/img/starfield.svg');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        z-index: 0;
+        background-size: 50px 50px;
+        background-image: linear-gradient(to right, var(--slate-800) 1px, transparent 1px),
+          linear-gradient(to bottom, var(--slate-800) 1px, transparent 1px);
         background-position: top center;
+        image-rendering: pixelated;
     }
 }
 
