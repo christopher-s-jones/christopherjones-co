@@ -1,16 +1,15 @@
 ---
+import Image from "astro/components/Image.astro"
+const { imageSrc, imageAlt, imageWidth, imageHeight, imageStyles, figureStyles } = Astro.props;
 ---
-
-<figure class="px-0 md:px-5 mb-10 lg:mb-0
-    relative mx-auto 
-    lg:row-start-1 lg:col-start-1 lg:col-end-7
-    w-7/8 lg:w-full h-48 lg:h-64 2xl:h-96">
-    <img
-    srcset="/img/chris-flatirons-192w.png 192w, /img/chris-flatirons-256w.png 256w, /img/chris-flatirons-512w.png 512w"
-    sizes="(max-width: 320px) 192px, (max-width: 640px) 256px, (max-width: 1024px) 384px"
-    src="/img/chris-flatirons-512w.png"
-    class="mx-auto size-48 md:size-64 xl:size-72 2xl:size-96 
-        rounded-full border-4 border-blue-400 dark:border-blue-900"
-    alt="Christopher Jones photo in Boulder, Colorado"
-/>
+    <figure class={figureStyles}>
+    <Image
+    src={imageSrc}
+    widths={[192, 256, 512]}
+    sizes="(max-width: 320px) 192px, (max-width: 640px) 256px, (max-width: 1024px) 512px"
+    class={imageStyles}
+    alt={imageAlt}
+    width={imageWidth}
+    height={imageHeight}
+    />
 </figure>
