@@ -1,14 +1,14 @@
 ---
 import Card from "./Card.astro"
 ---
-<section
-id="high-quality-software-development"
-class="relative bg-slate-100 dark:bg-slate-950 -top-1 z-10 scroll-mt-16
-    px-5 md:px-10 lg:px-20 py-20 md:py-40 items-center"
+<section class="relative 
+    flex flex-col items-center justify-between gap-20
+   bg-slate-50 dark:bg-slate-950 -top-1 z-10 scroll-mt-16
+    px-5 md:px-10 lg:px-20 py-10 md:py-20 lg-py:40 background-grid-light dark:background-grid-dark"
 >
 <h1
     class="text-slate-800 dark:text-slate-300 text-center
-    font-sans font-light sm:font-normal tracking-tight
+    font-sans font-normal md:font-light tracking-tight
     dark:font-extralight dark:sm:font-light
     text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl 3xl:text-8xl"
 >
@@ -16,31 +16,30 @@ class="relative bg-slate-100 dark:bg-slate-950 -top-1 z-10 scroll-mt-16
 </h1>
 <h2
     class="font-sans text-slate-600 dark:text-slate-400
-        text-md sm:text-xl md:text-2xl 2xl:text-3xl text-center max-w-2xl
-        mx-auto px-5 md:px-10 py-10 3xl:py-20 mb-5 md:mb-10 lg:mb-20"
+        text-md sm:text-xl md:text-2xl 2xl:text-3xl 3xl:text-4xl text-center max-w-2xl
+        mx-auto px-5 md:px-10"
 >
-    Open communication and an iterative development process produce great results.
+    I focus on open communication and an iterative development process to produce great results.
 </h2>
-<ul role="list" class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0 justify-center">
-    <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-    />
-    <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-    />
-    <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-    />
-    <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-    />
-</ul>
+<div class="w-full max-w-7xl flex flex-col lg:flex-row gap-10 md:gap-20 
+    items-center justify-start lg:justify-center 
+    px-5 py-10 md:px-20 md:py-20 rounded-xl border border-slate-400 bg-slate-200 dark:border-slate-800 dark:bg-blue-975">
+    <div class="items-center w-32 h-32 lg:w-64 lg:h-64">
+        <img class="rounded-full grow-none" src="/img/schildhauer.jpg" alt="Image of Mark Schildhauer" />
+    </div>
+    <div class="w-full">
+        <span class="block font-sans italic font-extrabold text-5xl text-start">&ldquo;</span>
+        <span class="font-serif italic text-xl lg:text-3xl text-center">
+            Chris consistently demonstrates an ability to rapidly understand complex technical issues, 
+            assimilate and mediate among competing technical perspectives, and communicate these to his 
+            engineering team for coordinated implementation.
+        </span>
+        <span class="block font-sans italic font-extrabold text-5xl text-end">&rdquo;</span>
+        <div class="block font-sans text-xl lg:text-3xl text-end text-slate-400 dark:text-slate-500">
+            <div class="block">&mdash; Mark Schildhauer</div>
+            <div class="block">Director of Computing</div>
+            <div class="block">NCEAS, UC Santa Barbara</div>
+        </div>
+    </div>
+</div>
 </section>
