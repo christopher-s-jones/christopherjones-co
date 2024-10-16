@@ -1,0 +1,11 @@
+---
+import type { string } from 'astro:schema';
+
+const { class: sectionStyles } = Astro.props;
+
+---
+
+<section 
+    class:list={[sectionStyles, "w-full flex flex-col lg:flex-row items-center justify-center px-10 md:px-20 xl:px-30"]}>
+    <slot />
+</section>
