@@ -1,0 +1,387 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import Layout from "../layouts/Layout.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
+---
+
+<Layout title="Christopher Jones | Projects">
+    <div class="py-10 bg-slate-200 dark:bg-blue-960">
+        <h1
+            class="text-slate-800 dark:text-slate-300 text-center
+        font-sans font-normal md:font-light tracking-tight
+        dark:font-extralight dark:sm:font-light
+        mt-20 md:mt-40 mb-10 md:mb-20
+        text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl 3xl:text-8xl"
+        >
+            <span class="">Selected Projects</span>
+        </h1>
+        <h2
+            class="font-sans text-slate-600 dark:text-slate-400
+        text-md sm:text-xl md:text-2xl 2xl:text-3xl text-center max-w-4xl
+        mx-auto px-5 md:px-10 mb-20"
+        >
+            I've developed software for over two decades with two driving
+            principles - use
+            <span class="font-semibold text-sky-500">
+                community collaboration
+            </span>
+            to design architectures that work well for the greatest numbers, and
+            write
+            <span class="font-semibold text-sky-500">
+                open source software
+            </span>
+            that is robust and benefits future generations. Below are a select set
+            of projects that I've worked on as a lead developer and where I've offered
+            my expertise alongside a team of researchers, engineers, designers, program
+            managers, outreach coordinators, students, and others.
+        </h2>
+    </div>
+
+    <!--Realtime data project -->
+    <SectionLayout class={["background-grid-light dark:background-grid-dark"]}>
+        <ProjectCard
+            title="Realtime Wire and Telemetry Data Infrastructure"
+            subtitle="A distributed data network with realtime binary wire protocol parsers for the Pacific Islands Ocean Observing System"
+            imageURL="/img/realtime-data-overview.svg"
+            imageStyles="w-full lg:w-1/2 bg-white dark:bg-slate-200 rounded-xl border border-slate-200 dark:border-slate-800 p-2"
+            imageAlt="Overview of the Realtime Data System Nearshore Architecture"
+            imageWidth="3542"
+            imageHeight="1922"
+            badges={[
+                "Java",
+                "Matlab",
+                "Python",
+                "Shell",
+                "TCP sockets",
+                "Linux",
+                "git",
+            ]}
+        >
+            <p
+                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+            >
+                Researchers at the University of Hawaii are building and
+                maintaining infrastructure to measure and monitor ocean and
+                atmosphere conditions throughout the Pacific Islands. As the
+                lead developer on a realtime streaming data system, I
+                <span class="font-bold dark:text-slate-200"
+                    >designed a software architecture</span
+                >
+                and
+                <span class="font-bold dark:text-slate-200"
+                    >wrote custom binary wire protocol parsers
+                </span>
+                that captured data being sent via underwater cables and over cellular
+                and WiFi telemetry sites on remote islands. I deployed redundant
+                instances of a
+                <span class="font-bold dark:text-slate-200"
+                    >realtime streaming server</span
+                >, and wrote client software that streams the parsed binary
+                data to the server. I developed client software that processed
+                the data on a schedule, archiving the raw data and
+                <span class="font-bold dark:text-slate-200"
+                    >producing time-series plots</span
+                >
+                that were accessible to researchers and the public over the web.
+                To manage the instrument data streams, I wrote a
+                <span class="font-bold dark:text-slate-200"
+                    >command line client</span
+                >
+                used by the operations staff to start and stop the data flow during
+                times of maintenance. Data sampling times were configured per instrument,
+                from the second, minute, hourly, and daily scales.
+            </p>
+        </ProjectCard>
+    </SectionLayout>
+
+    <!--DataONE
+    https://dataoneorg.github.io/api-documentation/
+     -->
+    <SectionLayout
+        class={[
+            "bg-gradient-to-r from-slate-50 to-slate-300 dark:from-blue-975 dark:to-blue-900",
+        ]}
+    >
+        <ProjectCard
+            class={[""]}
+            title="DataONE: A Distributed Earth Science Data Network"
+            subtitle="Community-based schemas, APIs, and infrastructure to enable public data access across disparate data repository systems"
+            imageURL="/img/dataone-repositories.svg"
+            imageStyles=" w-full lg:w-1/2 bg-white dark:bg-slate-100 rounded-xl border border-slate-200 dark:border-slate-800 p-2"
+            imageCaption="The DataONE Network is made up of voluntary member data repositories that implement a common API."
+            imageAlt="The DataONE Network Repository Information"
+            imageWidth="3542"
+            imageHeight="1922"
+            badges={[
+                "Java",
+                "Python",
+                "Javascript",
+                "Elastic Search",
+                "Logstash",
+                "OAuth",
+                "XML",
+                "JSON-LD",
+                "Linux",
+                "git",
+            ]}
+        >
+            <p
+                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+            >
+                The DataONE Project is an international effort to make earth
+                science data both openly avaialble and easy to understand. As
+                the lead developer, I
+                <span class="font-bold dark:text-slate-200"
+                    >managed a team of engineers
+                </span>
+                that developed and implemented a
+                <span class="font-bold dark:text-slate-200"
+                    >distributed software architecture</span
+                >
+                and a
+                <span class="font-bold dark:text-slate-200"
+                    >common REST API</span
+                >
+                based on the needs of the research community. The architecture included
+                aggregation and search services being run on a set of
+                <span class="font-bold dark:text-slate-200"
+                    >regionally-based coordinating nodes</span
+                >
+                that harvest metadata from close to a hundred independent
+                <span class="font-bold dark:text-slate-200"
+                    >data repositories around the world</span
+                >
+                .The architecture included peer agreement policies that would allow
+                data to be replicated among repositories for longevity, and I wrote
+                software that coordinated the replication activities across the network.
+                This work was across a team of teams from multiple academic, government,
+                and non-profit organizations, so building
+                <span class="font-bold dark:text-slate-200"
+                    >clear technical specifications</span
+                >
+                and using
+                <span class="font-bold dark:text-slate-200"
+                    >good communication</span
+                >
+                among developers were critical to the success of the project.
+            </p>
+        </ProjectCard>
+    </SectionLayout>
+
+    <!-- Arctic data center -->
+    <SectionLayout class={["background-grid-light dark:background-grid-dark"]}>
+        <ProjectCard
+            title="US National Science Foundation Arctic Data Center"
+            subtitle="An easy-to-use data repository for the public and the Arctic research community"
+            imageURL="/img/arctic-data-center-landing-page.png"
+            imageStyles="w-full lg:w-1/2 bg-white dark:bg-slate-200 rounded-xl border border-slate-200 dark:border-slate-800 p-1"
+            imageAlt="Image of the Arctic Data Center web application."
+            imageWidth="3542"
+            imageHeight="1922"
+            badges={[
+                "Java",
+                "Javascript",
+                "HTML/CSS",
+                "Solr",
+                "XML",
+                "Linux",
+                "git",
+            ]}
+        >
+            <p
+                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+            >
+                The US National Science Foundation funds Arctic research by
+                groups around the country. I was a senior developer on the
+                project to archive up to 1.5 petabytes of the past and current
+                research data being produced, and to make the information
+                publicly-accessible. Our team
+                <span class="font-bold dark:text-slate-200"
+                    >designed and implemented backend web services</span
+                >
+                and a
+                <span class="font-bold dark:text-slate-200"
+                    >frontend web application</span
+                >
+                used for easy login, upload, search, and download of data and metadata
+                by researchers involved in Arctic work. I
+                <span class="font-bold dark:text-slate-200"
+                    >coordinated with international technical teams</span
+                >
+                responsible for the smooth flow of data from remote expeditions.
+            </p>
+        </ProjectCard>
+    </SectionLayout>
+
+    <!-- DataONE provenance work
+    https://link.springer.com/chapter/10.1007/978-3-319-40593-3_28
+    /documents/2018-Cao-et-al-DataONE--A-Data-Federation-with-Provenance-Support.pdf
+    /documents/AGU2018-DataONE-ProvONE-poster-print.pdf
+    /img/provone-model-for-web.svg
+    -->
+    <SectionLayout
+        class={[
+            "bg-gradient-to-r from-slate-50 to-slate-300 dark:from-blue-975 dark:to-blue-900",
+        ]}
+    >
+        <ProjectCard
+            class={[""]}
+            title="Provenance Metadata In Science Data Sharing Networks"
+            subtitle="Building a W3C PROV ontology extension to verify data lineage and build trust"
+            imageURL="/img/provone-model-for-web.svg"
+            imageStyles=" w-full lg:w-1/2 bg-white dark:bg-slate-100 rounded-xl border border-slate-300 dark:border-slate-800 p-5"
+            imageAlt="The ProvONE Provenance Graph Model"
+            imageWidth="3542"
+            imageHeight="1922"
+            badges={[
+                "Java",
+                "Matlab",
+                "R",
+                "Javascript",
+                "Linux",
+                "git",
+                "RDF",
+                "OWL",
+            ]}
+        >
+            <p
+                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+            >
+                Giving credit to researchers who have shared their data, and in
+                turn understanding the accuracy of their research require
+                systems that collect and store relationships about the
+                <span class="font-bold dark:text-slate-200"
+                    >lineage of inputs and outputs
+                </span>
+                that are used in research analysis. As part of the DataONE project,
+                I was a main developer working with a team of researchers to
+                <span class="font-bold dark:text-slate-200"
+                    >create a provenance model specification</span
+                >
+                that can capture research workflows in detail. By extending the W3C
+                PROV model, we built software systems in multiple languages to capture
+                these relationships, upload them to data repositories as part of
+                the entire dataset, and make the relationships searchable such that
+                future researchers could
+                <span class="font-bold dark:text-slate-200"
+                    >understand the detailed flow of data</span
+                >
+                from one study to the next. This involved coordination with international
+                partners, and an iterative development process to ensure the specification
+                was complete. There's more information in the
+                <a
+                    class="text-sky-500 hover:underline"
+                    target="offline"
+                    href="/documents/2018-Cao-et-al-DataONE--A-Data-Federation-with-Provenance-Support.pdf"
+                >
+                    conference paper</a
+                > and the
+                <a
+                    class="text-sky-500 hover:underline"
+                    target="offline"
+                    href="/documents/AGU2018-DataONE-ProvONE-poster-print.pdf"
+                >
+                    conference poster
+                </a>.
+            </p>
+        </ProjectCard>
+    </SectionLayout>
+
+    <!-- Bookkeeper -->
+    <SectionLayout class={["background-grid-light dark:background-grid-dark"]}>
+        <ProjectCard
+            title="Bookkeeper: A Web Service for Product Usage and Quota Tracking"
+            subtitle="Developing a SQL-backed web service for tracking per-user and per-group hosted products and their related quotas"
+            imageURL="/img/bookkeeper-create-portal-sequence.svg"
+            imageStyles="w-full lg:w-1/2 bg-white border border-slate-300 dark:border-slate-800 rounded-xl p-5"
+            imageAlt="Diagram of the Bookkeeper software example data flow."
+            imageWidth="3542"
+            imageHeight="1922"
+            badges={[
+                "Java",
+                "JSON API",
+                "PostgreSQL",
+                "OAuth",
+                "Kubernetes",
+                "Linux",
+                "git",
+            ]}
+        >
+            <p
+                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+            >
+                Running repository systems and the supporting web applications
+                isn't familiar to most researchers and their labs. At DataONE,
+                we made it simpler for researchers to manage and showcase their
+                work by offering a set of
+                <span class="font-bold dark:text-slate-200"
+                    >hosted services
+                </span>
+                that were free and paid, depending on the level of use. I
+                <span class="font-bold dark:text-slate-200"
+                    >designed and developed</span
+                > the
+                <a
+                    href="https://github.com/DataONEorg/bookkeeper"
+                    target="offline"
+                    class="text-sky-500 hover:underline"
+                    >web service
+                </a>
+                that tracks the products being used and provides the information
+                as a RESTful JSON API to the web applications that the researchers
+                were using. We deployed the service to our on-premise
+                <span class="font-bold dark:text-slate-200"
+                    >Kubernetes cluster</span
+                >
+                to maintain high uptime. The example shown here is part of the documentation
+                I wrote of the software sequence used when a researcher is creating
+                a new "portal" product to showcase their work.
+            </p>
+        </ProjectCard>
+    </SectionLayout>
+
+    <!-- Awesome Command Line Book
+    -->
+    <SectionLayout
+        class={[
+            "bg-gradient-to-r from-slate-50 to-slate-300 dark:from-blue-975 dark:to-blue-900",
+        ]}
+    >
+        <ProjectCard
+            class={[""]}
+            title="The Awesome Command Line Book (In progress)"
+            subtitle="21 Commands To Get You Started With You Computer's Magic Portal!"
+            imageURL="/img/awesome-command-line-title-page.svg"
+            imageStyles="w-full lg:w-1/3 bg-white rounded-xl border border-slate-300 dark:border-slate-800 p-5"
+            imageAlt="Awesome Command Line Book Image"
+            imageWidth="3542"
+            imageHeight="1922"
+            badges={["AsciiDoc", "Shell", "Ruby", "git"]}
+        >
+            <p
+                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+            >
+                I'm currently writing a book to
+                <span class="font-bold" dark:text-slate-200>empower people</span
+                >
+                that are currently unfamiliar
+                <span class="font-bold" dark:text-slate-200
+                    >with the command line</span
+                >
+                , but that would undoubtably benefit from using it &#8212; which
+                is everyone! In this book, I demonstrate
+                <span class="font-bold" dark:text-slate-200
+                    >twenty-one everyday commands
+                </span>
+                that are available on MacOS, Linux, and Windows Subsystem for Linux.
+                It is an introductory guide meant to be accessible to anyone who
+                has access to a computer. I'm writing the book as a
+                <span class="font-bold" dark:text-slate-200
+                    >free and open source </span
+                >
+                <a href="https://github.com/christopher-s-jones/awesome-command-line" class="text-sky-500 hover:underline">project</a>
+                so that when finished, anyone will have access to the book.
+            </p>
+        </ProjectCard>
+    </SectionLayout>
+</Layout>
