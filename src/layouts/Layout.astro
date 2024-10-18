@@ -9,7 +9,7 @@ import Header from "../components/react/Header";
 import Footer from "../components/Footer.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="bg-slate-50 dark:bg-blue-975">
 	<head>
 		<meta charset="UTF-8" />
@@ -17,15 +17,57 @@ import Footer from "../components/Footer.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link href="/app.css" rel="stylesheet" />
 		<title>{title}</title>
-		<ClientRouter />
+		<!-- <ClientRouter /> -->
+		<script is:inline>
+			/**
+			 * Sets the theme at the root element
+			 * @param theme the theme to set: "light" | "dark"
+			 */
+			const setTheme = (theme) => {
+				if (theme === "light") {
+					document.documentElement.classList.remove("dark");
+				} else {
+					document.documentElement.classList.add("dark");
+				}
+			};
+
+			/**
+			 * Gets the previous theme from the persistent store, if any,
+			 * or from the system settings
+			 */
+			const getTheme = () => {
+				let theme;
+
+				// Set up a system theme change listener
+				const darkPref = window.matchMedia(
+					"(prefers-color-scheme: dark)",
+				);
+				darkPref.addEventListener("change", (event) => {
+					const newTheme = event.matches ? "dark" : "light";
+					if (newTheme === "light") {
+						document.documentElement.classList.remove("dark");
+					} else {
+						document.documentElement.classList.add("dark");
+					}
+				});
+
+				// Otherwise use system settings
+				theme = darkPref.matches ? "dark" : "light";
+				return theme;
+			};
+			const theme = getTheme();
+			setTheme(theme);
+		</script>
 	</head>
-	<body class="antialiased 
+	<body
+		class="antialiased overflow-x-hidden
 		bg-no-repeat dark:bg-no-repeat
 		bg-slate-50
-		dark:bg-gradient-to-b 
-			dark:from-blue-975 dark:from-30% 
-			dark:to-blue-950 dark:to-60%
-		text-slate-900 dark:text-slate-50">
+		dark:bg-gradient-to-b
+		dark:from-blue-975 dark:from-30%
+		dark:to-blue-960 dark:to-60%
+		text-slate-900 dark:text-slate-50"
+	>
 		<div class="grid grid-cols-1 gap-0 items-center">
 			<Header client:only />
 			<slot />
