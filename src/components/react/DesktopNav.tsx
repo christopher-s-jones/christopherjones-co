@@ -14,17 +14,24 @@ export default function DesktopNav() {
                 "md:flex items-center justify-end font-sans font-semibold text-lg 3xl:text-3xl"
             }
         >
+           <div>
+                <a
+                    className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 hover:text-amber-500 dark:hover:text-amber-400"
+                    href="/">
+                    Home
+                </a>
+            </div>
             <div>
                 <a
                     className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 hover:text-amber-500 dark:hover:text-amber-400"
-                    href="#projects">
+                    href="/projects">
                     Projects
                 </a>
             </div>
             <div>
                 <a
                     className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 hover:text-amber-500 dark:hover:text-amber-400"
-                    href="#about">
+                    href="/about">
                     About
                 </a>
             </div>
