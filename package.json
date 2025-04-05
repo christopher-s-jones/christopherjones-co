@@ -5,26 +5,32 @@
     "private": true,
     "scripts": {
         "dev": "astro dev",
+        "test": "vitest",
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
         "astro": "astro"
     },
     "dependencies": {
+        "@astrojs/check": "^0.9.4",
         "@astrojs/react": "^4.2.3",
+        "@nanostores/persistent": "^1.0.0",
         "@nanostores/react": "github:nanostores/react",
+        "@nostr-dev-kit/ndk": "^2.13.3",
         "@types/react": "^19.1.0",
         "@types/react-dom": "^19.1.2",
         "astro": "^5.6.1",
         "nanostores": "^0.11.4",
         "radix-ui": "^1.1.3",
         "react": "^19.1.0",
-        "react-dom": "^19.1.0"
+        "react-dom": "^19.1.0",
+        "typescript": "^5.8.3"
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.13",
         "autoprefixer": "^10.4.20",
         "postcss-cli": "^11.0.0",
-        "tailwindcss": "^3.4.4"
+        "tailwindcss": "^3.4.4",
+        "vitest": "^3.1.1"
     }
 }
