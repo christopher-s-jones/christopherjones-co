@@ -7,17 +7,17 @@ export default function MobileNav() {
     
     return (
         <nav className="md:hidden flex items-center">
-            <button
-                type="button"
-                className="text-slate-500 dark:text-slate-400
-                hover:text-slate-600 dark:hover:text-slate-300
-                size-8 flex justify-center"
+            <button type="button"
+                className="flex justify-center"
             >
-                <span className="sr-only">Navigation</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
-                    className="size-8 fill-slate-800"
+                    fill="currentColor"
+                    className="size-8 text-slate-800 dark:text-slate-400
+                        hover:text-slate-600 dark:hover:text-slate-300"
                 >
                     <path
                         fill-rule="evenodd"
@@ -26,5 +26,5 @@ export default function MobileNav() {
                 </svg>
             </button>
         </nav>
-    )
+    );
 }
