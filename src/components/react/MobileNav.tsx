@@ -31,7 +31,7 @@ export default function MobileNav() {
                 </button>
                 {isMenuOpen &&
                     <div className={isMenuOpen ?
-                        "fixed top-[2px] right-4 pt-14 pb-6 w-full max-w-xs rounded-lg shadow-lg bg-stone-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-800 text-base font-semibold" : "hidden"
+                        "fixed top-[2px] right-4 pt-14 pb-6 w-full max-w-xs rounded-lg shadow-lg bg-slate-50 dark:bg-blue-960 border border-slate-400 dark:border-slate-600 text-base font-semibold" : "hidden"
                     }>
                         <button onClick={() => $isMenuOpen.set(false)} className="absolute top-5 right-5 w-8 h-8
                             flex items-center justify-center 
@@ -46,9 +46,9 @@ export default function MobileNav() {
                             </svg>
                         </button>
                         <ul className="space-y-4 dark:border-spacing-y-1">
-                            <a className="block px-1 py-2 hover:text-stone-950 dark:hover:text-white hover:bg-amber-400" href="#projects"><li><span className="px-6">Projects</span></li></a>
-                            <a className="block px-1 py-2 hover:text-stone-950 dark:hover:text-white hover:bg-amber-400" href="#about"><li><span className="px-6">About</span></li></a>
-                            <a className="block px-1 py-2 hover:text-stone-950 dark:hover:text-white hover:bg-amber-400" href="#contact"><li><span className="px-6">Contact</span></li></a>
+                            <a onClick={() => $isMenuOpen.set(false)} className="block px-1 py-2 hover:text-slate-950 dark:hover:text-white hover:bg-amber-500" href="#projects"><li><span className="px-6">Projects</span></li></a>
+                            <a onClick={() => $isMenuOpen.set(false)} className="block px-1 py-2 hover:text-slate-950 dark:hover:text-white hover:bg-amber-500" href="#about"><li><span className="px-6">About</span></li></a>
+                            <a onClick={() => $isMenuOpen.set(false)} className="block px-1 py-2 hover:text-slate-950 dark:hover:text-white hover:bg-amber-500" href="#contact"><li><span className="px-6">Contact</span></li></a>
                         </ul>
                     </div>
                 }
