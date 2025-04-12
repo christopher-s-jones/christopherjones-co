@@ -17,7 +17,7 @@ export default function DesktopNav() {
                 <a
                     className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 hover:text-amber-500 dark:hover:text-amber-400"
                     href="/#services">
-                    Services
+                    Projects
                 </a>
             </div>
             <div>
