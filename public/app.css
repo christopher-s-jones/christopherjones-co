@@ -743,6 +743,10 @@ video {
   top: 1.25rem;
 }
 
+.top-\[2px\] {
+  top: 2px;
+}
+
 .z-10 {
   z-index: 10;
 }
