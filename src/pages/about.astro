@@ -18,6 +18,13 @@ try {
     repos = summary.totalRepositories;
     otherContribs = summary.totalOtherContributions;
 
+    const commitsEl = document.getElementById("commits");
+    const reposEl = document.getElementById("repos");
+    const othercontribsEl = document.getElementById("othercontribs");
+    commitsEl.innerText = commits;
+    reposEl.innerText = repos;
+    othercontribsEl.innerText = otherContribs;
+
 } catch (error) {
     console.log("Couldn't update the Github contribution stats, using cached values.");
 }
@@ -108,7 +115,7 @@ try {
                             bg-blue-200 dark:bg-blue-950 border-slate-300 dark:border-slate-800
                             lg:min-h-[200px] min-w-1/4 lg:min-w-40"
                         >
-                            <p
+                            <p id="commits"
                                 class="text-center items-center px-30 pt-10
                                 text-3xl md:text-5xl font-extrabold font-sans text-sky-600"
                             >
@@ -126,7 +133,7 @@ try {
                             bg-blue-200 dark:bg-blue-950 border-slate-300 dark:border-slate-800
                             lg:min-h-[200px] min-w-1/4 lg:min-w-40"
                         >
-                            <p
+                            <p id="repos"
                                 class="text-center items-center px-30 pt-10
                                 text-3xl md:text-5xl font-extrabold font-sans text-sky-600"
                             >
@@ -144,7 +151,7 @@ try {
                             bg-blue-200 dark:bg-blue-950 border-slate-300 dark:border-slate-800
                             lg:min-h-[200px] min-w-1/4 lg:min-w-40"
                         >
-                            <p
+                            <p  id="othercontribs"
                                 class="text-center items-center px-30 pt-10
                                 text-3xl md:text-5xl font-extrabold font-sans text-sky-600"
                             >
