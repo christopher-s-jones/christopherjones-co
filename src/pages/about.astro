@@ -1,33 +1,38 @@
 ---
 import Avatar from "../components/Avatar.astro";
 import Layout from "../layouts/Layout.astro";
+import chrisWillowCreek from "../assets/chris-willow-creek.png";
+import chrisKimberlyEmmy from "../assets/chris-kimberly-emmy.png";
 const commits = "5074";
 const repos = "66";
 const otherContribs = "306";
 ---
 
 <script>
-let commits = "5074";
-let repos = "66";
-let otherContribs = "306";
+    let commits = "5074";
+    let repos = "66";
+    let otherContribs = "306";
 
-try {
-    const response = await fetch("https://christopherjones.co/api/contributions/summary.json");
-    const summary = await response.json();
-    commits = summary.totalCommitContributions;
-    repos = summary.totalRepositories;
-    otherContribs = summary.totalOtherContributions;
+    try {
+        const response = await fetch(
+            "https://christopherjones.co/api/contributions/summary.json",
+        );
+        const summary = await response.json();
+        commits = summary.totalCommitContributions;
+        repos = summary.totalRepositories;
+        otherContribs = summary.totalOtherContributions;
 
-    const commitsEl = document.getElementById("commits");
-    const reposEl = document.getElementById("repos");
-    const othercontribsEl = document.getElementById("othercontribs");
-    commitsEl.innerText = commits;
-    reposEl.innerText = repos;
-    othercontribsEl.innerText = otherContribs;
-
-} catch (error) {
-    console.log("Couldn't update the Github contribution stats, using cached values.");
-}
+        const commitsEl = document.getElementById("commits");
+        const reposEl = document.getElementById("repos");
+        const othercontribsEl = document.getElementById("othercontribs");
+        commitsEl.innerText = commits;
+        reposEl.innerText = repos;
+        othercontribsEl.innerText = otherContribs;
+    } catch (error) {
+        console.log(
+            "Couldn't update the Github contribution stats, using cached values.",
+        );
+    }
 </script>
 <Layout title="About | Christopher Jones">
     <section
@@ -45,8 +50,8 @@ try {
                     lg:grid lg:gap-x-4 lg:gap-y-32 3xl:gap-y-64 lg:grid-cols-12 max-w-7xl 3xl:max-w-[1980px]"
             >
                 <Avatar
-                    imageSrc="/img/chris-willow-creek.png"
-                    imageAlt="Photo at Monarch Pass, CO - Chris with Emmy, the supercat."
+                    imageSrc={chrisKimberlyEmmy}
+                    imageAlt="Photo of Chris, Willow Creek Trail, Sangre de Cristo Mountains, CO"
                     imageWidth="512"
                     imageHeight="512"
                     imageStyles="size-48 md:size-64 xl:size-96 3xl:size-[512px] rounded-full border-4 border-blue-400 dark:border-blue-900"
@@ -66,19 +71,14 @@ try {
                         nearby trails in our free time!
                     </p>
                     <p class="mb-5">
-                        For work, I was introduced to Linux in 1996 &#8212; and
-                        wow! &#8212; I was fascinated with it, and have been
-                        running Linux servers and desktop systems ever since. I
-                        learned and absorbed as much as possible and worked as a
-                        programmer and Linux system administrator at the
-                        University of California, Santa Barbara, taking part in
-                        transitioning departments from Unix to Linux servers.
+                        I've been building open source software systems with
+                        great teams of people in both the marine and earth
+                        sciences that enable open data and information access.
                     </p>
                     <p class="mb-5">
-                        I've since focused on software development in both the
-                        marine and earth sciences &#8212; building
-                        community-driven, distributed and open source systems
-                        that encourage open data and information access.
+                        I was introduced to Linux back in 1996 &#8212; and
+                        wow &#8212; I was fascinated with it, and have been
+                        running Linux servers and desktop systems ever since.
                     </p>
                     <p class="mb-5">
                         I love working with teams, writing clean and
@@ -102,11 +102,18 @@ try {
                         class="text-slate-800 dark:text-slate-300 text-center
                             font-sans font-normal md:font-light tracking-tight
                             dark:font-extralight dark:sm:font-light
-                            mb-5 w-full
+                            w-full
                             text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-6xl"
                     >
                         Combined Open Source Contributions
                     </h2>
+                    <span class="mb-5 text-center">&#8212;
+                        <a 
+                            href="https://github.com/christopher-s-jones/ghcontributions" 
+                            target="offline"
+                            class="text-sky-500 hover:underline">aggregated</a>
+                        across two Github profiles
+                    </span>
                     <div
                         class="flex flex-col md:flex-row gap-20 items-center justify-between w-full"
                     >
@@ -115,7 +122,8 @@ try {
                             bg-blue-200 dark:bg-blue-950 border-slate-300 dark:border-slate-800
                             lg:min-h-[200px] min-w-1/4 lg:min-w-40"
                         >
-                            <p id="commits"
+                            <p
+                                id="commits"
                                 class="text-center items-center px-30 pt-10
                                 text-3xl md:text-5xl font-extrabold font-sans text-sky-600"
                             >
@@ -133,7 +141,8 @@ try {
                             bg-blue-200 dark:bg-blue-950 border-slate-300 dark:border-slate-800
                             lg:min-h-[200px] min-w-1/4 lg:min-w-40"
                         >
-                            <p id="repos"
+                            <p
+                                id="repos"
                                 class="text-center items-center px-30 pt-10
                                 text-3xl md:text-5xl font-extrabold font-sans text-sky-600"
                             >
@@ -151,7 +160,8 @@ try {
                             bg-blue-200 dark:bg-blue-950 border-slate-300 dark:border-slate-800
                             lg:min-h-[200px] min-w-1/4 lg:min-w-40"
                         >
-                            <p  id="othercontribs"
+                            <p
+                                id="othercontribs"
                                 class="text-center items-center px-30 pt-10
                                 text-3xl md:text-5xl font-extrabold font-sans text-sky-600"
                             >
