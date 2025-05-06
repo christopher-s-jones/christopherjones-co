@@ -2,6 +2,7 @@
 import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
+import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png";
 ---
 
 <Layout title="Christopher Jones | Projects">
@@ -20,18 +21,18 @@ import SectionLayout from "../layouts/SectionLayout.astro";
         text-md sm:text-xl md:text-2xl 2xl:text-3xl text-center max-w-4xl
         mx-auto px-5 md:px-10 mb-20"
         >
-            I've developed software for over two decades with two driving
+            I've developed software for over two decades with two common
             principles - use
             <span class="font-semibold text-sky-500">
                 community collaboration
             </span>
-            to design architectures that work well for the greatest numbers, and
+            to design architectures that work well for the greatest involved, and
             write
             <span class="font-semibold text-sky-500">
                 open source software
             </span>
-            that is robust and benefits future generations. Below are a select set
-            of projects that I've worked on as a lead developer and where I've offered
+            that is robust and benefits future builders. Below are a select set of
+            projects that I've worked on as a lead developer and where I've offered
             my expertise alongside a team of researchers, engineers, designers, program
             managers, outreach coordinators, students, and others.
         </h2>
@@ -76,9 +77,9 @@ import SectionLayout from "../layouts/SectionLayout.astro";
                 instances of a
                 <span class="font-bold dark:text-slate-200"
                     >realtime streaming server</span
-                >, and wrote client software that streams the parsed binary
-                data to the server. I developed client software that processed
-                the data on a schedule, archiving the raw data and
+                >, and wrote client software that streams the parsed binary data
+                to the server. I developed client software that processed the
+                data on a schedule, archiving the raw data and
                 <span class="font-bold dark:text-slate-200"
                     >producing time-series plots</span
                 >
@@ -128,9 +129,9 @@ import SectionLayout from "../layouts/SectionLayout.astro";
             <p
                 class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
             >
-                The DataONE Project is an international effort to make earth
-                science data both openly avaialble and easy to understand. As
-                the lead developer, I
+                The DataONE Project is a $35+ million international project to
+                make earth science data both openly avaialble and easy to
+                understand. As the lead developer, I
                 <span class="font-bold dark:text-slate-200"
                     >managed a team of engineers
                 </span>
@@ -142,7 +143,7 @@ import SectionLayout from "../layouts/SectionLayout.astro";
                 <span class="font-bold dark:text-slate-200"
                     >common REST API</span
                 >
-                based on the needs of the research community. The architecture included
+                based on the needs of the research community. The architecture includes
                 aggregation and search services being run on a set of
                 <span class="font-bold dark:text-slate-200"
                     >regionally-based coordinating nodes</span
@@ -151,11 +152,12 @@ import SectionLayout from "../layouts/SectionLayout.astro";
                 <span class="font-bold dark:text-slate-200"
                     >data repositories around the world</span
                 >
-                .The architecture included peer agreement policies that would allow
-                data to be replicated among repositories for longevity, and I wrote
-                software that coordinated the replication activities across the network.
-                This work was across a team of teams from multiple academic, government,
-                and non-profit organizations, so building
+                .The architecture included peer agreement policies using mutual TLS
+                for authentication that would allow data to be replicated among repositories
+                for longevity. Among other things, I wrote the software package that
+                coordinated the replication activities across the network. This work
+                was across a team of teams from multiple academic, government, and
+                non-profit organizations, so building
                 <span class="font-bold dark:text-slate-200"
                     >clear technical specifications</span
                 >
@@ -163,7 +165,7 @@ import SectionLayout from "../layouts/SectionLayout.astro";
                 <span class="font-bold dark:text-slate-200"
                     >good communication</span
                 >
-                among developers were critical to the success of the project.
+                among developers have been critical to the success of the project.
             </p>
         </ProjectCard>
     </SectionLayout>
@@ -173,7 +175,7 @@ import SectionLayout from "../layouts/SectionLayout.astro";
         <ProjectCard
             title="US National Science Foundation Arctic Data Center"
             subtitle="An easy-to-use data repository for the public and the Arctic research community"
-            imageURL="/img/arctic-data-center-landing-page.png"
+            imageURL={arcticDataCenterImage}
             imageStyles="w-full lg:w-1/2 bg-white dark:bg-slate-200 rounded-xl border border-slate-200 dark:border-slate-800 p-1"
             imageAlt="Image of the Arctic Data Center web application."
             imageWidth="3542"
@@ -368,19 +370,22 @@ import SectionLayout from "../layouts/SectionLayout.astro";
                 <span class="font-bold" dark:text-slate-200
                     >with the command line</span
                 >
-                , but that would undoubtably benefit from using it &#8212; which
-                is everyone! In this book, I demonstrate
+                . In the book I teach how to get yourself set up and the essentials
+                of using a terminal, and then highlight
                 <span class="font-bold" dark:text-slate-200
                     >twenty-one everyday commands
                 </span>
                 that are available on MacOS, Linux, and Windows Subsystem for Linux.
                 It is an introductory guide meant to be accessible to anyone who
-                has access to a computer. I'm writing the book as a
+                has access to a computer. It's a
                 <span class="font-bold" dark:text-slate-200
-                    >free and open source </span
+                    >free and open source
+                </span>
+                <a
+                    href="https://github.com/christopher-s-jones/awesome-command-line"
+                    class="text-sky-500 hover:underline">project</a
                 >
-                <a href="https://github.com/christopher-s-jones/awesome-command-line" class="text-sky-500 hover:underline">project</a>
-                so that when finished, anyone will have access to the book.
+                where everyone interested will have access to the book.
             </p>
         </ProjectCard>
     </SectionLayout>
