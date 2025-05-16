@@ -6,6 +6,48 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
 ---
 
 <Layout title="Christopher Jones | Projects">
+    <!-- Awesome Command Line Book -->
+    <SectionLayout class={["background-grid-light dark:background-grid-dark"]}>
+        <ProjectCard
+            class={[""]}
+            title="The Awesome Command Line Book (In progress)"
+            subtitle="21 Commands To Get You Started With You Computer's Magic Portal!"
+            imageURL="/img/awesome-command-line-title-page.svg"
+            imageStyles="w-full lg:w-1/3 bg-white rounded-xl border border-slate-300 dark:border-slate-800 p-5"
+            imageAlt="Awesome Command Line Book Image"
+            imageWidth="3542"
+            imageHeight="1922"
+            badges={["AsciiDoc", "Shell", "Ruby", "git"]}
+        >
+            <p
+                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+            >
+                I'm currently writing a book to
+                <span class="font-bold" dark:text-slate-200>empower people</span
+                >
+                that are unfamiliar
+                <span class="font-bold" dark:text-slate-200
+                    >with the command line</span
+                >
+                . In the book I teach how to get yourself set up and the essentials
+                of using a terminal, and then highlight
+                <span class="font-bold" dark:text-slate-200
+                    >twenty-one everyday commands
+                </span>
+                that are available on MacOS, Linux, and Windows Subsystem for Linux.
+                It is an introductory guide meant to be accessible to anyone who
+                has access to a computer. It's a
+                <span class="font-bold" dark:text-slate-200
+                    >free and open source
+                </span>
+                <a
+                    href="https://github.com/christopher-s-jones/awesome-command-line"
+                    class="text-sky-500 hover:underline">project</a
+                >
+                where everyone interested will have access to the book.
+            </p>
+        </ProjectCard>
+    </SectionLayout>
     <div class="py-10 bg-slate-200 dark:bg-blue-960">
         <h1
             class="text-slate-800 dark:text-slate-300 text-center
@@ -14,7 +56,7 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
         mt-20 md:mt-40 mb-10 md:mb-20
         text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl 3xl:text-8xl"
         >
-            <span class="">Selected Projects</span>
+            <span class="">Previous Projects</span>
         </h1>
         <h2
             class="font-sans text-slate-600 dark:text-slate-400
@@ -338,54 +380,6 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
                 to maintain high uptime. The example shown here is part of the documentation
                 I wrote of the software sequence used when a researcher is creating
                 a new "portal" product to showcase their work.
-            </p>
-        </ProjectCard>
-    </SectionLayout>
-
-    <!-- Awesome Command Line Book
-    -->
-    <SectionLayout
-        class={[
-            "bg-gradient-to-r from-slate-50 to-slate-300 dark:from-blue-975 dark:to-blue-900",
-        ]}
-    >
-        <ProjectCard
-            class={[""]}
-            title="The Awesome Command Line Book (In progress)"
-            subtitle="21 Commands To Get You Started With You Computer's Magic Portal!"
-            imageURL="/img/awesome-command-line-title-page.svg"
-            imageStyles="w-full lg:w-1/3 bg-white rounded-xl border border-slate-300 dark:border-slate-800 p-5"
-            imageAlt="Awesome Command Line Book Image"
-            imageWidth="3542"
-            imageHeight="1922"
-            badges={["AsciiDoc", "Shell", "Ruby", "git"]}
-        >
-            <p
-                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
-            >
-                I'm currently writing a book to
-                <span class="font-bold" dark:text-slate-200>empower people</span
-                >
-                that are currently unfamiliar
-                <span class="font-bold" dark:text-slate-200
-                    >with the command line</span
-                >
-                . In the book I teach how to get yourself set up and the essentials
-                of using a terminal, and then highlight
-                <span class="font-bold" dark:text-slate-200
-                    >twenty-one everyday commands
-                </span>
-                that are available on MacOS, Linux, and Windows Subsystem for Linux.
-                It is an introductory guide meant to be accessible to anyone who
-                has access to a computer. It's a
-                <span class="font-bold" dark:text-slate-200
-                    >free and open source
-                </span>
-                <a
-                    href="https://github.com/christopher-s-jones/awesome-command-line"
-                    class="text-sky-500 hover:underline">project</a
-                >
-                where everyone interested will have access to the book.
             </p>
         </ProjectCard>
     </SectionLayout>
