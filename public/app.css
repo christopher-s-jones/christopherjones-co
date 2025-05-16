@@ -2284,6 +2284,11 @@ video {
   padding-bottom: 1px;
 }
 
+.py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -2314,6 +2319,10 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
 }
 
 .text-left {
@@ -2819,6 +2828,10 @@ div.writer span#typewriter-5 {
   .md\:py-40 {
     padding-top: 10rem;
     padding-bottom: 10rem;
+  }
+
+  .md\:pt-20 {
+    padding-top: 5rem;
   }
 
   .md\:text-2xl {
