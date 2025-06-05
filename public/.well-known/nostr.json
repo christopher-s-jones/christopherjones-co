@@ -1,5 +1,16 @@
 {
     "names": {
-	    "_": "91e35537f9f4027e7ff47a1b23cd238a00b178719d1bd1ffdb7ed81f3fb45c66"
+            "_": "91e35537f9f4027e7ff47a1b23cd238a00b178719d1bd1ffdb7ed81f3fb45c66",
+            "chris": "91e35537f9f4027e7ff47a1b23cd238a00b178719d1bd1ffdb7ed81f3fb45c66"
+    },
+    "relays": {
+            "91e35537f9f4027e7ff47a1b23cd238a00b178719d1bd1ffdb7ed81f3fb45c66": [
+                    "wss://relay.primal.net",
+                    "wss://relay.coinos.io",
+                    "wss://relay.damus.io",
+                    "wss://bucket.coracle.social",
+                    "wss://relayable.org",
+                    "wss://auth.nostr1.com"
+            ]
     }
 }
