@@ -1,6 +1,6 @@
 import { useStore } from "@nanostores/react";
 import { $isMobile } from "../../stores/mobileState";
-import ContactButton from "./ContactButton"
+import BookingButton from "./BookingButton";
 
 export default function DesktopNav() {
 
@@ -16,28 +16,37 @@ export default function DesktopNav() {
         >
            <div>
                 <a
-                    className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 hover:text-amber-500 dark:hover:text-amber-400"
+                    className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 
+                        hover:text-amber-500 dark:hover:text-amber-400"
                     href="/">
                     Home
                 </a>
             </div>
             <div>
                 <a
-                    className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 hover:text-amber-500 dark:hover:text-amber-400"
+                    className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 
+                        hover:text-amber-500 dark:hover:text-amber-400"
+                    href="/#services">
+                    Services
+                </a>
+            </div>
+            <div>
+                <a
+                    className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 
+                        hover:text-amber-500 dark:hover:text-amber-400"
                     href="/projects">
                     Projects
                 </a>
             </div>
             <div>
                 <a
-                    className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 hover:text-amber-500 dark:hover:text-amber-400"
+                    className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 
+                        hover:text-amber-500 dark:hover:text-amber-400"
                     href="/about">
                     About
                 </a>
             </div>
-
-            {/* <!-- Get In Touch button --> */}
-            <ContactButton />
+            <BookingButton buttonText="Book a Call" />
         </nav>
     );
 }
