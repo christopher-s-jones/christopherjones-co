@@ -1,0 +1,89 @@
+---
+import BookIcon from "./icons/BookIcon.astro";
+import ChatBubblesIcon from "./icons/ChatBubblesIcon.astro";
+import CodeBracketIcon from "./icons/CodeBracketIcon.astro";
+import LetsTalkButton from "./react/LetsTalkButton";
+---
+
+<section
+    id="services"
+    class="overflow-hidden scroll-smooth
+        bg-gradient-to-r
+        from-blue-400 dark:from-blue-975
+        to-blue-300 dark:to-blue-950
+        flex flex-col gap-10 md:gap-20 items-center justify-center
+        px-5 md:px-10 lg:px-20 
+        py-10 md:py-20 lg:py-40
+        text-slate-50
+        text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl 3xl:text-8xl"
+>
+    <h1
+        class="text-center
+            font-sans font-normal md:font-light tracking-tight
+            dark:font-extralight dark:sm:font-light"
+    >
+        Services
+    </h1>
+    <div
+        class="w-full max-w-5xl
+        grid gap-8
+        grid-rows-2 grid-cols-1
+        md:grid-rows-2 md:grid-cols-2"
+    >
+        <div
+            class="row-span-1 md:col-span-2 lg:col-span-1 lg:row-span-2
+                rounded-xl 
+                bg-gradient-to-r
+                from-amber-600 dark:from-amber-700
+                to-amber-500 dark:to-amber-500
+                py-10 px-10"
+        >
+            <CodeBracketIcon />
+            <h2 class="py-5  md:mt-20 lg:mt-40 text-2xl md:text-3xl lg:text-4xl">
+                Software Development
+            </h2>
+            <p class="text-lg">
+                Do you have ideas on a new business or application, and need
+                someone to develop the architecture and build the layers?  You may
+                also have a production website that needs features added.  I
+                love diving into the technical details of both backend and frontend
+                engineering, and can help you build or expand your ideas.  Let's discuss 
+                how I can help with your databases, services, and web interfaces.
+                I can help make the development process easeful &#8212; with a team, or solo.
+            </p>
+            <LetsTalkButton buttonText="Let's Talk" />
+        </div>
+        <div
+            class="row-start-2 lg:col-start-2 lg:row-start-1
+                rounded-xl bg-blue-900
+                py-10 px-10"
+        >
+            <ChatBubblesIcon />
+            <h2 class="py-5 text-xl md:text-2xl lg:text-3xl">Consulting</h2>
+            <p class="text-lg">
+                If you have a general idea of the web application you want to
+                build, but need to evaluate different technologies, I can work
+                with you in an advisory role to help focus you or your team.  I've
+                led multiple teams in ground-up software architectures, so can provide
+                you with the direction you need to finish the project.
+            </p>
+            <LetsTalkButton buttonText="Let's Talk" />
+        </div>
+        <div
+            class="row-start-3 md:col-start-2 md:row-start-2 lg:col-start-2 lg:row-start-2
+                rounded-xl bg-blue-900
+                py-10 px-10"
+        >
+            <BookIcon />
+            <h2 class="py-5 text-xl md:text-2xl lg:text-3xl">Training</h2>
+            <p class="text-lg">
+                We are all more powerful than we know, and sometimes just need
+                some direction and training in technical skills to build
+                our own projects.  I enjoy teaching new skills to help people
+                become sovereign individuals in the technology realm.  Let's discuss
+                how I can assist with your technical journey.
+            </p>
+            <LetsTalkButton buttonText="Let's Talk" />
+        </div>
+    </div>
+</section>

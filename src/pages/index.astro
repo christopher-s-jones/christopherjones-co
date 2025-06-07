@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HeroSection.astro";
 import FoldSection from "../components/FoldSection.astro";
 import ContactSection from "../components/ContactSection.astro";
+import Services from "../components/Services.astro";
 ---
 <script>
 	import { MessageSender } from "../controllers/messageSender";
@@ -11,6 +12,7 @@ import ContactSection from "../components/ContactSection.astro";
 <Layout title="Christopher Jones | Software Development">
 	<main class="relative w-screen">
 		<HeroSection />
+		<Services />
 		<FoldSection />
 		<ContactSection />
 	</main>
