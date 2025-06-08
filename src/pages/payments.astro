@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
+---
+
+<Layout title="Payments | Christopher Jones">
+    <div class="relative">
+        <SectionLayout
+            class={[
+                "grid grid-cols-1 gap-20 items-center justify-center place-content-center background-grid-light dark:background-grid-dark",
+            ]}
+        >
+            <div class="w-full text-center p-10">
+                <div class="flex flex-col items-center py-10">
+                    <h1
+                        class="text-slate-800 dark:text-slate-300 text-center
+                            font-sans font-normal md:font-light tracking-tight
+                            dark:font-extralight dark:sm:font-light
+                            mt-20 mb-10
+                            text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl 3xl:text-8xl"
+                    >
+                        <span class="">Payments</span>
+                    </h1>
+                    <h2
+                        class="font-sans font-normal order-last
+                        text-slate-600 dark:text-slate-400
+                        text-lg md:text-2xl 2xl:text-3xl 3xl:text-4xl max-w-4xl
+                        lg:col-start-7 lg:col-end-13
+                        mx-auto md:px-10 mt-10 md:mt-20 lg:mt-0 mb-20"
+                    >
+                        Thank you for scheduling a call. Please pay the invoice
+                        before the call using one of the methods below. For
+                        Bitcoin payments over $1,000, please use the On-chain
+                        code or the Cash App code. The Lightning code is
+                        available only for payments less than $1,000.
+                    </h2>
+                </div>
+                <div
+                    class="flex flex-col gap-40 w-full text-center items-center justify-center place-content-center"
+                >
+                    <div class="flex flex-col gap-10 bg-white rounded-3xl p-10">
+                        <p class="text-slate-800 text-semibold text-xl">
+                            Lightning Network
+                        </p>
+                        <img
+                            class="bg-white"
+                            src="/img/csj-npub-lnaddress.svg"
+                            width="400px"
+                            alt="Cash App QR Code"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-10 bg-white rounded-3xl p-10">
+                        <p class="text-slate-800 text-semibold text-xl">
+                            Bitcoin On-Chain
+                        </p>
+                        <img
+                            class="bg-white"
+                            src="/img/csj-p4-bitcoin-qrcode.svg"
+                            width="400px"
+                            alt="Cash App QR Code"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-10 bg-white rounded-3xl p-10">
+                        <p class="text-slate-800 text-semibold text-xl">
+                            Cash App
+                        </p>
+                        <img
+                            class="bg-white"
+                            src="/img/cashapp-qr-code.png"
+                            width="400px"
+                            alt="Cash App QR Code"
+                        />
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-20"></div>
+            </div>
+        </SectionLayout>
+    </div>
+</Layout>
