@@ -1,0 +1,45 @@
+---
+import Booker from "../components/react/Booker";
+import Layout from "../layouts/Layout.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
+---
+
+<Layout title="Bookings | Christopher Jones">
+    <div class="relative">
+        <SectionLayout
+            class={[
+                "grid grid-cols-1 gap-20 items-center justify-center place-content-center background-grid-light dark:background-grid-dark",
+            ]}
+        >
+            <div class="w-full text-center p-10">
+                <div class="flex flex-col items-center py-10">
+                    <h1
+                        class="text-slate-800 dark:text-slate-300 text-center
+                            font-sans font-normal md:font-light tracking-tight
+                            dark:font-extralight dark:sm:font-light
+                            mt-20 mb-10
+                            text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl 3xl:text-8xl"
+                    >
+                        <span class="">Book a Call</span>
+                    </h1>
+                    <h2
+                        class="font-sans font-normal order-last
+                        text-slate-600 dark:text-slate-400
+                        text-lg md:text-2xl 2xl:text-3xl 3xl:text-4xl max-w-4xl
+                        lg:col-start-7 lg:col-end-13
+                        mx-auto md:px-10 mt-10 md:mt-20 lg:mt-0"
+                    >
+                        Please use the form below to schedule a call.
+                        Twenty-minute calls to connect and coordinate are free.
+                        Software projects, consulting, training sessions are $75
+                        per hour. We can arrange for payment via Bitcoin,
+                        Lightning, Cash App, or Wire Transfer &#8212; whichever
+                        is most convenient for you. Thank you!
+                    </h2>
+                </div>
+                <Booker client:only="react" />
+                <div class="mt-10 lg:mt-20"></div>
+            </div>
+        </SectionLayout>
+    </div>
+</Layout>
