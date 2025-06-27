@@ -1,47 +1,21 @@
 ---
 import Avatar from "../components/Avatar.astro";
 import Layout from "../layouts/Layout.astro";
-import chrisWillowCreek from "../assets/chris-willow-creek.png";
 import chrisKimberlyEmmy from "../assets/chris-kimberly-emmy.png";
-const commits = "5074";
-const repos = "66";
-const otherContribs = "306";
+import GithubSummary from "../components/react/GithubSummary";
+
+const response: Response = await fetch("https://christopherjones.co/api/contributions/summary.json")
+const summary = await response.json() as Summary;
 ---
 
-<script>
-    let commits = "5074";
-    let repos = "66";
-    let otherContribs = "306";
-
-    try {
-        const response = await fetch(
-            "https://christopherjones.co/api/contributions/summary.json",
-        );
-        const summary = await response.json();
-        commits = summary.totalCommitContributions;
-        repos = summary.totalRepositories;
-        otherContribs = summary.totalOtherContributions;
-
-        const commitsEl = document.getElementById("commits");
-        const reposEl = document.getElementById("repos");
-        const othercontribsEl = document.getElementById("othercontribs");
-        commitsEl.innerText = commits;
-        reposEl.innerText = repos;
-        othercontribsEl.innerText = otherContribs;
-    } catch (error) {
-        console.log(
-            "Couldn't update the Github contribution stats, using cached values.",
-        );
-    }
-</script>
 <Layout title="About | Christopher Jones">
     <section
         class="relative px-0 w-full bg-gradient-to-b from-blue-400 to-blue-50 dark:bg-none"
     >
         <div
-            class="relative bg-sunflare-background-light bg-top xl:bg-center bg-auto bg-no-repeat
-        dark:bg-starfield-background-sm dark:lg:bg-starfield-background-md
-        dark:bg-no-repeat dark:bg-center dark:bg-cover w-full"
+            class="relative bg-sunflare-background-light bg-auto bg-no-repeat
+                dark:bg-starfield-background-sm dark:lg:bg-starfield-background-md
+                dark:bg-no-repeat dark:bg-center dark:bg-cover w-full"
         >
             <div
                 class="mx-5 lg:mx-10 2xl:mx-auto pt-40 lg:pt-40 2xl:pt-60 3xl:pt-80 pb-10
@@ -76,9 +50,9 @@ const otherContribs = "306";
                         sciences that enable open data and information access.
                     </p>
                     <p class="mb-5">
-                        I was introduced to Linux back in 1996 &#8212; and
-                        wow &#8212; I was fascinated with it, and have been
-                        running Linux servers and desktop systems ever since.
+                        I was introduced to Linux back in 1996 &#8212; and wow
+                        &#8212; I was fascinated with it, and have been running
+                        Linux servers and desktop systems ever since.
                     </p>
                     <p class="mb-5">
                         I love working with teams, writing clean and
@@ -106,74 +80,16 @@ const otherContribs = "306";
                     >
                         Combined Open Source Contributions
                     </h2>
-                    <span class="mb-5 text-center">&#8212;
-                        <a 
-                            href="https://github.com/christopher-s-jones/ghcontributions" 
+                    <span class="mb-5 text-center"
+                        >&#8212;
+                        <a
+                            href="https://github.com/christopher-s-jones/ghcontributions"
                             target="offline"
-                            class="text-sky-500 hover:underline">aggregated</a>
+                            class="text-sky-500 hover:underline">aggregated</a
+                        >
                         across two Github profiles
                     </span>
-                    <div
-                        class="flex flex-col md:flex-row gap-20 items-center justify-between w-full"
-                    >
-                        <div
-                            class="w-2/3 md:w-full rounded-lg
-                            bg-blue-200 dark:bg-blue-950 border-slate-300 dark:border-slate-800
-                            lg:min-h-[200px] min-w-1/4 lg:min-w-40"
-                        >
-                            <p
-                                id="commits"
-                                class="text-center items-center px-30 pt-10
-                                text-3xl md:text-5xl font-extrabold font-sans text-sky-600"
-                            >
-                                {commits}
-                            </p>
-                            <p
-                                class="font-sans text-md 2xl:text-xl 3xl:text-2xl py-5 lg:py-10
-                                text-slate-600 dark:text-slate-400"
-                            >
-                                repository commits
-                            </p>
-                        </div>
-                        <div
-                            class="w-2/3 md:w-full rounded-lg
-                            bg-blue-200 dark:bg-blue-950 border-slate-300 dark:border-slate-800
-                            lg:min-h-[200px] min-w-1/4 lg:min-w-40"
-                        >
-                            <p
-                                id="repos"
-                                class="text-center items-center px-30 pt-10
-                                text-3xl md:text-5xl font-extrabold font-sans text-sky-600"
-                            >
-                                {repos}
-                            </p>
-                            <p
-                                class="font-sans text-md 2xl:text-xl 3xl:text-2xl py-5 lg:py-10
-                                text-slate-600 dark:text-slate-400"
-                            >
-                                repository count
-                            </p>
-                        </div>
-                        <div
-                            class="w-2/3 md:w-full rounded-lg
-                            bg-blue-200 dark:bg-blue-950 border-slate-300 dark:border-slate-800
-                            lg:min-h-[200px] min-w-1/4 lg:min-w-40"
-                        >
-                            <p
-                                id="othercontribs"
-                                class="text-center items-center px-30 pt-10
-                                text-3xl md:text-5xl font-extrabold font-sans text-sky-600"
-                            >
-                                {otherContribs}
-                            </p>
-                            <p
-                                class="font-sans text-md 2xl:text-xl 3xl:text-2xl py-5 lg:py-10
-                                text-slate-600 dark:text-slate-400"
-                            >
-                                other contributions
-                            </p>
-                        </div>
-                    </div>
+                    <GithubSummary data={summary} client:only="react"/>
                 </section>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5616 999">
