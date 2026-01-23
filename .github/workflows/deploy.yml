@@ -2,8 +2,7 @@ name: Deploy christopherjones.co to Github Pages
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches: [ gh-pages ]
 
 permissions:
   contents: read
