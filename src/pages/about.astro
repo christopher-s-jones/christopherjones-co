@@ -4,7 +4,11 @@ import Layout from "../layouts/Layout.astro";
 import chrisKimberlyEmmy from "../assets/chris-kimberly-emmy.png";
 import GithubSummary from "../components/react/GithubSummary";
 
-const response: Response = await fetch("https://christopherjones.co/api/contributions/summary.json")
+let response: Response = await fetch("https://christopherjones.co/api/contributions/summary.json")
+if (response.status !== 200) {
+    console.log("Contribution summary.json file is not available. Fetching from Github.");
+    response = await fetch("https://raw.githubusercontent.com/christopher-s-jones/christopherjones-co/refs/heads/main/public/api/contributions/summary.json")
+}
 const summary = await response.json() as Summary;
 ---
 
