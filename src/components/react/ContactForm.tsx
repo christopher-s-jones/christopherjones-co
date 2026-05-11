@@ -1,8 +1,7 @@
 
 import FormButton from "./FormButton";
 import { $message, type Message } from "../../stores/message";
-import React, { Component } from "react";
-import type { ChangeEvent, FormEvent } from "react";
+import type { FormEvent } from "react";
 import { useStore } from "@nanostores/react";
 import Notification from "./Notification";
 
@@ -22,10 +21,12 @@ export default function ContactForm() {
             // the appropriate components
             !isSending && $message.setKey("state", "sending")
             const formData: FormData = new FormData(submitEvent.target as HTMLFormElement);
+            const msg = formData.get("message");
             $message.set({
                 state: "sending",
-                text: formData.get("message").toString(),
+                text: msg !== null ? msg.toString() : "",
             });
+
         }}
             className="border-2 border-slate-300 dark:border-slate-800 
         bg-slate-50 dark:bg-blue-960 rounded-lg md:col-start-1 md:col-end-2"
