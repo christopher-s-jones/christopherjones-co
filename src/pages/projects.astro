@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
 import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png";
+import bookCoverImage from "../assets/book-cover.png";
 ---
 
 <Layout title="Christopher Jones | Projects">
@@ -22,15 +23,13 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
             class={[""]}
             title="The Awesome Command Line Book"
             subtitle="21 Commands To Get You Started With You Computer's Magic Portal!"
-            imageURL="/img/awesome-command-line-title-page.svg"
-            imageStyles="w-full lg:w-1/3 bg-white rounded-xl border border-slate-300 dark:border-slate-800 p-5"
+            imageURL={bookCoverImage}
+            imageStyles="w-full lg:w-1/3 rounded-xl border border-slate-300 dark:border-slate-800"
             imageAlt="Awesome Command Line Book Image"
-            imageWidth="3542"
-            imageHeight="1922"
             badges={["AsciiDoc", "Shell", "Ruby", "git"]}
         >
             <p
-                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+                class="text-sm md:text-lg 3xl:text-xl leading-relaxed mb-5"
             >
                 I'm currently writing a book to
                 <span class="font-bold" dark:text-slate-200>empower people</span
@@ -89,59 +88,55 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
         </h2>
     </div>
 
-    <!--Realtime data project -->
+        <!-- Bookkeeper -->
     <SectionLayout class={["background-grid-light dark:background-grid-dark"]}>
         <ProjectCard
-            title="Realtime Wire and Telemetry Data Infrastructure"
-            subtitle="A distributed data network with realtime binary wire protocol parsers for the Pacific Islands Ocean Observing System"
-            imageURL="/img/realtime-data-overview.svg"
-            imageStyles="w-full lg:w-1/2 bg-white dark:bg-slate-200 rounded-xl border border-slate-200 dark:border-slate-800 p-2"
-            imageAlt="Overview of the Realtime Data System Nearshore Architecture"
+            title="Bookkeeper: A Web Service for Product Usage and Quota Tracking"
+            subtitle="Developing a SQL-backed web service for tracking per-user and per-group hosted products and their related quotas"
+            imageURL="/img/bookkeeper-create-portal-sequence.svg"
+            imageStyles="w-full lg:w-1/2 bg-white border border-slate-300 dark:border-slate-800 rounded-xl p-5"
+            imageAlt="Diagram of the Bookkeeper software example data flow."
             imageWidth="3542"
             imageHeight="1922"
             badges={[
                 "Java",
-                "Matlab",
-                "Python",
-                "Shell",
-                "TCP sockets",
+                "JSON API",
+                "PostgreSQL",
+                "OAuth",
+                "Kubernetes",
                 "Linux",
                 "git",
             ]}
         >
             <p
-                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+                class="text-sm md:text-lg 3xl:text-xl leading-relaxed mb-5"
             >
-                Researchers at the University of Hawaii are building and
-                maintaining infrastructure to measure and monitor ocean and
-                atmosphere conditions throughout the Pacific Islands. As the
-                lead developer on a realtime streaming data system, I
+                Running repository systems and the supporting web applications
+                isn't familiar to most researchers and their labs. At DataONE,
+                we made it simpler for researchers to manage and showcase their
+                work by offering a set of
                 <span class="font-bold dark:text-slate-200"
-                    >designed a software architecture</span
-                >
-                and
-                <span class="font-bold dark:text-slate-200"
-                    >wrote custom binary wire protocol parsers
+                    >hosted services
                 </span>
-                that captured data being sent via underwater cables and over cellular
-                and WiFi telemetry sites on remote islands. I deployed redundant
-                instances of a
+                that were free and paid, depending on the level of use. I
                 <span class="font-bold dark:text-slate-200"
-                    >realtime streaming server</span
-                >, and wrote client software that streams the parsed binary data
-                to the server. I developed client software that processed the
-                data on a schedule, archiving the raw data and
+                    >designed and developed</span
+                > the
+                <a
+                    href="https://github.com/DataONEorg/bookkeeper"
+                    target="offline"
+                    class="text-sky-500 hover:underline"
+                    >web service
+                </a>
+                that tracks the products being used and provides the information
+                as a RESTful JSON API to the web applications that the researchers
+                were using. We deployed the service to our on-premise
                 <span class="font-bold dark:text-slate-200"
-                    >producing time-series plots</span
+                    >Kubernetes cluster</span
                 >
-                that were accessible to researchers and the public over the web.
-                To manage the instrument data streams, I wrote a
-                <span class="font-bold dark:text-slate-200"
-                    >command line client</span
-                >
-                used by the operations staff to start and stop the data flow during
-                times of maintenance. Data sampling times were configured per instrument,
-                from the second, minute, hourly, and daily scales.
+                to maintain high uptime. The example shown here is part of the documentation
+                I wrote of the software sequence used when a researcher is creating
+                a new "portal" product to showcase their work.
             </p>
         </ProjectCard>
     </SectionLayout>
@@ -178,9 +173,13 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
             ]}
         >
             <p
-                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+                class="text-sm md:text-lg 3xl:text-xl leading-relaxed mb-5"
             >
-                The DataONE Project is a $35+ million international project to
+                The 
+                <a href="https://www.dataone.org/" target="offline" class="text-sky-500 hover:underline">
+                DataONE Project 
+                </a>
+                is a $35+ million international project to
                 make earth science data both openly avaialble and easy to
                 understand. As the lead developer, I
                 <span class="font-bold dark:text-slate-200"
@@ -195,7 +194,7 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
                     >common REST API</span
                 >
                 based on the needs of the research community. The architecture includes
-                aggregation and search services being run on a set of
+                data aggregation and search services being run on a set of
                 <span class="font-bold dark:text-slate-200"
                     >regionally-based coordinating nodes</span
                 >
@@ -242,7 +241,7 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
             ]}
         >
             <p
-                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+                class="text-sm md:text-lg 3xl:text-xl leading-relaxed mb-5"
             >
                 The US National Science Foundation funds Arctic research by
                 groups around the country. I was a senior developer on the
@@ -262,6 +261,63 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
                     >coordinated with international technical teams</span
                 >
                 responsible for the smooth flow of data from remote expeditions.
+            </p>
+        </ProjectCard>
+    </SectionLayout>
+
+    <!--Realtime data project -->
+    <SectionLayout class={["background-grid-light dark:background-grid-dark"]}>
+        <ProjectCard
+            title="Realtime Wire and Telemetry Data Infrastructure"
+            subtitle="A distributed data network with realtime binary wire protocol parsers for the Pacific Islands Ocean Observing System"
+            imageURL="/img/realtime-data-overview.svg"
+            imageStyles="w-full lg:w-1/2 bg-white dark:bg-slate-200 rounded-xl border border-slate-200 dark:border-slate-800 p-2"
+            imageAlt="Overview of the Realtime Data System Nearshore Architecture"
+            imageWidth="3542"
+            imageHeight="1922"
+            badges={[
+                "Java",
+                "Matlab",
+                "Python",
+                "Shell",
+                "TCP sockets",
+                "Linux",
+                "git",
+            ]}
+        >
+            <p
+                class="text-sm md:text-lg 3xl:text-xl leading-relaxed mb-5"
+            >
+                Researchers at the University of Hawaii are building and
+                maintaining infrastructure to measure and monitor ocean and
+                atmosphere conditions throughout the Pacific Islands. As the
+                lead developer on a realtime streaming data system, I
+                <span class="font-bold dark:text-slate-200"
+                    >designed a software architecture</span
+                >
+                and
+                <span class="font-bold dark:text-slate-200"
+                    >wrote custom binary wire protocol parsers
+                </span>
+                that captured data being sent via underwater cables and over cellular
+                and WiFi telemetry sites on remote islands. I deployed redundant
+                instances of a
+                <span class="font-bold dark:text-slate-200"
+                    >realtime streaming server</span
+                >, and wrote client software that streams the parsed binary data
+                to the server. I developed client software that processed the
+                data on a schedule, archiving the raw data and
+                <span class="font-bold dark:text-slate-200"
+                    >producing time-series plots</span
+                >
+                that were accessible to researchers and the public over the web.
+                To manage the instrument data streams, I wrote a
+                <span class="font-bold dark:text-slate-200"
+                    >command line client</span
+                >
+                used by the operations staff to start and stop the data flow during
+                times of maintenance. Data sampling times were configured per instrument,
+                from the second, minute, hourly, and daily scales.
             </p>
         </ProjectCard>
     </SectionLayout>
@@ -298,7 +354,7 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
             ]}
         >
             <p
-                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
+                class="text-sm md:text-lg 3xl:text-xl leading-relaxed mb-5"
             >
                 Giving credit to researchers who have shared their data, and in
                 turn understanding the accuracy of their research require
@@ -336,59 +392,6 @@ import arcticDataCenterImage from "../assets/arctic-data-center-landing-page.png
                 >
                     conference poster
                 </a>.
-            </p>
-        </ProjectCard>
-    </SectionLayout>
-
-    <!-- Bookkeeper -->
-    <SectionLayout class={["background-grid-light dark:background-grid-dark"]}>
-        <ProjectCard
-            title="Bookkeeper: A Web Service for Product Usage and Quota Tracking"
-            subtitle="Developing a SQL-backed web service for tracking per-user and per-group hosted products and their related quotas"
-            imageURL="/img/bookkeeper-create-portal-sequence.svg"
-            imageStyles="w-full lg:w-1/2 bg-white border border-slate-300 dark:border-slate-800 rounded-xl p-5"
-            imageAlt="Diagram of the Bookkeeper software example data flow."
-            imageWidth="3542"
-            imageHeight="1922"
-            badges={[
-                "Java",
-                "JSON API",
-                "PostgreSQL",
-                "OAuth",
-                "Kubernetes",
-                "Linux",
-                "git",
-            ]}
-        >
-            <p
-                class="text-sm md:text-md 2xl:text-lg 3xl:text-xl leading-relaxed mb-5"
-            >
-                Running repository systems and the supporting web applications
-                isn't familiar to most researchers and their labs. At DataONE,
-                we made it simpler for researchers to manage and showcase their
-                work by offering a set of
-                <span class="font-bold dark:text-slate-200"
-                    >hosted services
-                </span>
-                that were free and paid, depending on the level of use. I
-                <span class="font-bold dark:text-slate-200"
-                    >designed and developed</span
-                > the
-                <a
-                    href="https://github.com/DataONEorg/bookkeeper"
-                    target="offline"
-                    class="text-sky-500 hover:underline"
-                    >web service
-                </a>
-                that tracks the products being used and provides the information
-                as a RESTful JSON API to the web applications that the researchers
-                were using. We deployed the service to our on-premise
-                <span class="font-bold dark:text-slate-200"
-                    >Kubernetes cluster</span
-                >
-                to maintain high uptime. The example shown here is part of the documentation
-                I wrote of the software sequence used when a researcher is creating
-                a new "portal" product to showcase their work.
             </p>
         </ProjectCard>
     </SectionLayout>
