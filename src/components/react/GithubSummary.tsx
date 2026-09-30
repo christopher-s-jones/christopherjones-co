@@ -44,7 +44,7 @@ export default function GithubSummary({ data }) {
                         {commits}
                     </p>
                     <p
-                        className="font-sans text-md 2xl:text-xl 3xl:text-2xl py-5 lg:py-10
+                        className="font-sans text-base 2xl:text-xl 3xl:text-2xl py-5 lg:py-10
                 text-slate-600 dark:text-slate-400"
                     >
                         repository commits
@@ -63,7 +63,7 @@ export default function GithubSummary({ data }) {
                         {repos}
                     </p>
                     <p
-                        className="font-sans text-md 2xl:text-xl 3xl:text-2xl py-5 lg:py-10
+                        className="font-sans text-base 2xl:text-xl 3xl:text-2xl py-5 lg:py-10
                 text-slate-600 dark:text-slate-400"
                     >
                         repository count
@@ -82,7 +82,7 @@ export default function GithubSummary({ data }) {
                         {otherContribs}
                     </p>
                     <p
-                        className="font-sans text-md 2xl:text-xl 3xl:text-2xl py-5 lg:py-10
+                        className="font-sans text-base 2xl:text-xl 3xl:text-2xl py-5 lg:py-10
                 text-slate-600 dark:text-slate-400"
                     >
                         other contributions
