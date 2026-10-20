@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HeroSection.astro";
 import FoldSection from "../components/FoldSection.astro";
 import ContactSection from "../components/ContactSection.astro";
+import { ENABLE_SERVICES } from "astro:env/client";
 import Services from "../components/Services.astro";
 ---
 <script>
@@ -12,7 +13,7 @@ import Services from "../components/Services.astro";
 <Layout title="Christopher Jones | Software Development">
 	<main class="relative w-screen">
 		<HeroSection />
-		<Services />
+		{ ENABLE_SERVICES && <Services /> }
 		<FoldSection />
 		<ContactSection />
 	</main>

@@ -1,6 +1,8 @@
 import { useStore } from "@nanostores/react";
 import { $isMobile } from "../../stores/mobileState";
 import BookingButton from "./BookingButton";
+import { ENABLE_SERVICES } from "astro:env/client";
+
 
 export default function DesktopNav() {
 
@@ -22,6 +24,7 @@ export default function DesktopNav() {
                     Home
                 </a>
             </div>
+            { ENABLE_SERVICES && (
             <div>
                 <a
                     className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 
@@ -29,7 +32,7 @@ export default function DesktopNav() {
                     href="/#services">
                     Services
                 </a>
-            </div>
+            </div>)}
             <div>
                 <a
                     className="text-center p-3 ml-5 text-slate-700 dark:text-slate-100 

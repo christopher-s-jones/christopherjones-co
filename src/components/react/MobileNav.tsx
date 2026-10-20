@@ -2,6 +2,7 @@ import { useStore } from "@nanostores/react"
 import { $isMenuOpen } from "../../stores/menuState"
 import { $isMobile } from "../../stores/mobileState";
 import BookingButton from "./BookingButton";
+import { ENABLE_SERVICES } from "astro:env/client";
 
 
 export default function MobileNav() {
@@ -47,7 +48,9 @@ export default function MobileNav() {
                     </button>
                     <ul className="space-y-4">
                         <a onClick={() => $isMenuOpen.set(false)} className="block px-1 py-2 hover:text-slate-950 dark:hover:text-white hover:bg-amber-500" href="/"><li><span className="px-6">Home</span></li></a>
-                        <a onClick={() => $isMenuOpen.set(false)} className="block px-1 py-2 hover:text-slate-950 dark:hover:text-white hover:bg-amber-500" href="/#services"><li><span className="px-6">Services</span></li></a>
+                        { ENABLE_SERVICES && (
+                            <a onClick={() => $isMenuOpen.set(false)} className="block px-1 py-2 hover:text-slate-950 dark:hover:text-white hover:bg-amber-500" href="/#services"><li><span className="px-6">Services</span></li></a>
+                        )}
                         <a onClick={() => $isMenuOpen.set(false)} className="block px-1 py-2 hover:text-slate-950 dark:hover:text-white hover:bg-amber-500" href="/projects"><li><span className="px-6">Projects</span></li></a>
                         <a onClick={() => $isMenuOpen.set(false)} className="block px-1 py-2 hover:text-slate-950 dark:hover:text-white hover:bg-amber-500" href="/about"><li><span className="px-6">About</span></li></a>
                     </ul>
