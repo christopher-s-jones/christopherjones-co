@@ -23,4 +23,5 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: npm run build 
+        # Disable the Services section for the re-write
+        run: ENABLE_SERVICES=false npm run build 
